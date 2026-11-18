@@ -275,7 +275,7 @@
 <body>
 
   <header>
-    <h1>👶 Predicción de Desnutrición Infantil</h1>
+    <h1>Predicción de Desnutrición Infantil</h1>
     <p>Modelo predictivo para la identificación oportuna de alerta nutricional en infantes de Ecuador (ENSANUT)</p>
     <div class="badge-tag"><i class="bi bi-cpu"></i> Modelo Machine Learning Optimizado &bull; GitHub Pages & Streamlit Ready</div>
   </header>
@@ -501,7 +501,7 @@
       if (prob >= umbral) {
         resultBox.className = 'result-alert danger';
         resultIcon.className = 'bi bi-exclamation-triangle-fill';
-        resultTitle.innerText = '🚨 ALERTA DE DESNUTRICIÓN INFANTIL DETECTADA';
+        resultTitle.innerText = 'ALERTA DE DESNUTRICIÓN INFANTIL DETECTADA';
         resultDesc.innerText = `El infante presenta un riesgo estimado de ${probPct}%, el cual supera el umbral de alerta (${(umbral * 100).toFixed(0)}%). Se recomienda intervención y evaluación médica prioritaria.`;
         
         recList.innerHTML = `
@@ -513,7 +513,7 @@
       } else {
         resultBox.className = 'result-alert success';
         resultIcon.className = 'bi bi-shield-check';
-        resultTitle.innerText = '✅ Sin Alerta Inmediata de Desnutrición';
+        resultTitle.innerText = 'Sin Alerta Inmediata de Desnutrición';
         resultDesc.innerText = `El infante se encuentra dentro del rango de desarrollo esperado (${probPct}% de riesgo estimado).`;
 
         recList.innerHTML = `

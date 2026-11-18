@@ -22,7 +22,6 @@ import joblib
 # Configuración de página
 st.set_page_config(
     page_title="Predicción de Desnutrición Infantil - Ecuador",
-    page_icon="👶",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -37,30 +36,30 @@ st.markdown("""
         margin-bottom: 0.2rem;
     }
     .subtitle {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
         color: #4b5563;
         margin-bottom: 1.5rem;
     }
     .metric-card {
         background-color: #f8fafc;
-        border-radius: 10px;
+        border-radius: 8px;
         padding: 1rem;
-        border-left: 5px solid #3b82f6;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        border-left: 4px solid #2563eb;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.06);
         margin-bottom: 1rem;
     }
     .alert-box-danger {
         background-color: #fef2f2;
-        border: 2px solid #ef4444;
-        border-radius: 10px;
+        border: 2px solid #dc2626;
+        border-radius: 8px;
         padding: 1.2rem;
         color: #991b1b;
         font-weight: 600;
     }
     .alert-box-success {
         background-color: #f0fdf4;
-        border: 2px solid #22c55e;
-        border-radius: 10px;
+        border: 2px solid #16a34a;
+        border-radius: 8px;
         padding: 1.2rem;
         color: #166534;
         font-weight: 600;
@@ -72,14 +71,18 @@ st.markdown("""
 def load_model_bundle():
     model_path = "modelo_desnutricion.joblib"
     if not os.path.exists(model_path):
-        st.error(f"No se encontró el archivo del modelo '{model_path}'. Por favor ejecuta primero el notebook para exportarlo.")
+        st.error(f"No se encontró el archivo del modelo '{model_path}'.")
         return None
-    return joblib.load(model_path)
+    try:
+        return joblib.load(model_path)
+    except Exception as e:
+        st.error(f"Error al cargar el modelo: {e}")
+        return None
 
 bundle = load_model_bundle()
 
-st.markdown('<div class="main-title">👶 Evaluador de Riesgo de Desnutrición Infantil</div>', unsafe_allow_html=True)
-st.markdown('<div class="subtitle">Herramienta clínica y comunitaria para la predicción temprana de alerta de desnutrición infantil en Ecuador con Machine Learning</div>', unsafe_allow_html=True)
+st.markdown('<div class="main-title">Evaluador de Riesgo de Desnutrición Infantil</div>', unsafe_allow_html=True)
+st.markdown('<div class="subtitle">Herramienta clínica para la predicción temprana de alerta de desnutrición infantil en Ecuador con Machine Learning</div>', unsafe_allow_html=True)
 
 if bundle is None:
     st.stop()
@@ -93,7 +96,7 @@ group_lookups = bundle['group_lookups']
 default_threshold = bundle.get('threshold', 0.20)
 
 # Sidebar - Parámetros y Configuración
-st.sidebar.header("⚙️ Configuración del Modelo")
+st.sidebar.header("Configuración del Modelo")
 threshold = st.sidebar.slider(
     "Umbral de Decisión (Sensibilidad)",
     min_value=0.05,
@@ -105,17 +108,17 @@ threshold = st.sidebar.slider(
 
 st.sidebar.markdown("---")
 st.sidebar.markdown("""
-**ℹ️ Sobre el Modelo:**
+**Información del Modelo:**
 - **Algoritmo:** HistGradientBoosting Classifier
-- **Entrenamiento:** ENSANUT / Encuesta Nacional Ecuador (70,000 registros)
-- **Variables evaluadas:** Antropométricas (peso, talla, IMC, Z-scores) y sociodemográficas (región, educación materna).
+- **Muestra:** ENSANUT / Encuesta Nacional Ecuador (70,000 registros)
+- **Variables evaluadas:** Parámetros antropométricos (peso, talla, IMC, Z-scores) y sociodemográficos (región, nivel educativo materno).
 """)
 
 # Interfaz Principal - Formulario de Datos
 col_form, col_results = st.columns([1.1, 1.2], gap="large")
 
 with col_form:
-    st.subheader("📋 Datos del Infante")
+    st.subheader("Datos del Paciente")
     
     c1, c2 = st.columns(2)
     with c1:
@@ -170,14 +173,14 @@ with col_form:
     ratio_w_h = peso_kg / talla_cm
     
     st.markdown("---")
-    st.markdown("#### 📏 Indicadores Antropométricos Calculados")
+    st.markdown("#### Indicadores Antropométricos Calculados")
     m1, m2, m3 = st.columns(3)
     m1.metric("IMC Pediátrico", f"{imc:.1f} kg/m²")
     m2.metric("Ratio Peso / Talla", f"{ratio_w_h:.3f}")
     m3.metric("Relación Talla/Edad", f"{(talla_cm / (max(0, edad_meses) + 1)):.1f} cm/mes")
 
 with col_results:
-    st.subheader("📊 Resultado de la Evaluación")
+    st.subheader("Resultado de la Evaluación")
     
     # Preprocesamiento de entrada
     row = pd.DataFrame([{
@@ -243,19 +246,19 @@ with col_results:
     if is_alert:
         st.markdown(f"""
         <div class="alert-box-danger">
-            🚨 <strong>ALERTA DE DESNUTRICIÓN INFANTIL DETECTADA</strong><br>
+            <strong>ALERTA DE DESNUTRICIÓN INFANTIL DETECTADA</strong><br>
             El modelo ha determinado un riesgo superior al umbral establecido ({prob_percent:.1f}% vs {threshold * 100:.1f}%). Se sugiere evaluación médica y seguimiento nutricional prioritario.
         </div>
         """, unsafe_allow_html=True)
     else:
         st.markdown(f"""
         <div class="alert-box-success">
-            ✅ <strong>SIN ALERTA INMEDIATA DE DESNUTRICIÓN</strong><br>
+            <strong>SIN ALERTA INMEDIATA DE DESNUTRICIÓN</strong><br>
             El infante se encuentra dentro de los parámetros de desarrollo esperados según los datos sociodemográficos y antropométricos analizados ({prob_percent:.1f}% de riesgo).
         </div>
         """, unsafe_allow_html=True)
 
-    st.markdown("#### 🩺 Recomendaciones Pediátricas y Nutricionales")
+    st.markdown("#### Recomendaciones Pediátricas y Nutricionales")
     if is_alert:
         st.warning("""
         - **Atención Primaria:** Agendar cita en el Centro de Salud más cercano para valoración pediátrica integral.
@@ -271,4 +274,4 @@ with col_results:
         """)
 
 st.markdown("---")
-st.caption("Desarrollado para la Práctica de Inteligencia Artificial - Universidad / Proyecto Desnutrición Infantil Ecuador.")
+st.caption("Práctica de Inteligencia Artificial - Universidad / Proyecto Desnutrición Infantil Ecuador.")

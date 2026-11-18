@@ -1,68 +1,68 @@
-# 👶 Evaluador de Riesgo de Desnutrición Infantil (Ecuador)
+# Evaluador de Riesgo de Desnutrición Infantil (Ecuador)
 
-Sistema de inteligencia artificial clínica y comunitaria para la predicción temprana de alerta de desnutrición infantil en infantes de Ecuador, basado en encuestas nacionales de salud y nutrición (ENSANUT) y estándares de crecimiento de la OMS.
+Sistema clínico y comunitario para la predicción temprana de alerta de desnutrición infantil en infantes de Ecuador, basado en encuestas nacionales de salud y nutrición (ENSANUT) y estándares de crecimiento de la Organización Mundial de la Salud (OMS).
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/)
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-blue?logo=github)](https://darioXxx32.github.io/lab-hoy/)
 
 ---
 
-## 🚀 Despliegue en Streamlit Community Cloud
+## Despliegue en Streamlit Community Cloud
 
-Para desplegar la aplicación en la nube gratuita de Streamlit:
+Para desplegar la aplicación en Streamlit Community Cloud:
 
-1. Ve a [share.streamlit.io](https://share.streamlit.io/) e inicia sesión con tu cuenta de GitHub.
-2. Haz clic en **"New app"** (o "Create app").
-3. Configura los parámetros:
+1. Iniciar sesión en [share.streamlit.io](https://share.streamlit.io/) con la cuenta de GitHub.
+2. Hacer clic en **"New app"**.
+3. Seleccionar los parámetros del repositorio:
    * **Repository:** `darioXxx32/lab-hoy`
    * **Branch:** `main`
    * **Main file path:** `app.py`
-4. Haz clic en **"Deploy!"**. 
-   * Streamlit leerá automáticamente `requirements.txt` e instalará las dependencias necesarias.
-   * En 1 minuto tendrás tu enlace público funcionando (ejemplo: `https://lab-hoy-xxxxx.streamlit.app`).
+4. Hacer clic en **"Deploy!"**.
+   * Streamlit instalará las dependencias indicadas en `requirements.txt`.
+   * El servicio generará la URL pública de la aplicación.
 
 ---
 
-## 🌐 Despliegue en GitHub Pages
+## Despliegue en GitHub Pages
 
-Para habilitar la versión web estática alojada directamente en GitHub:
+Para habilitar la versión estática alojada en GitHub Pages:
 
-1. En tu repositorio de GitHub, dirígete a **Settings** > **Pages** (en el menú lateral izquierdo).
-2. En **Build and deployment** > **Source**, selecciona **Deploy from a branch**.
-3. En **Branch**, elige `main` y en la carpeta selecciona `/(root)`.
-4. Haz clic en **Save**.
-5. En unos minutos estará accesible en:
+1. En el repositorio de GitHub, ingresar a **Settings** > **Pages**.
+2. En **Build and deployment** > **Source**, seleccionar **Deploy from a branch**.
+3. En **Branch**, seleccionar `main` y en la carpeta elegir `/(root)`.
+4. Hacer clic en **Save**.
+5. La aplicación quedará disponible en:
    ```
    https://darioXxx32.github.io/lab-hoy/
    ```
 
 ---
 
-## 💻 Ejecución Local
+## Ejecución Local
 
-Para probar la aplicación en tu computadora:
+Para ejecutar la aplicación localmente:
 
 1. **Instalar dependencias:**
    ```bash
    pip install -r requirements.txt
    ```
 
-2. **Ejecutar la aplicación Streamlit:**
+2. **Iniciar Streamlit:**
    ```bash
    streamlit run app.py
    ```
 
 ---
 
-## 📁 Estructura del Repositorio
+## Estructura del Repositorio
 
-| Archivo / Carpeta | Descripción |
+| Archivo / Directorio | Descripción |
 | :--- | :--- |
-| **`app.py`** | Aplicación web interactiva principal en Streamlit. |
-| **`requirements.txt`** | Lista de librerías para el despliegue automático en Streamlit Community Cloud. |
-| **`modelo_desnutricion.joblib`** | Modelo predictivo empaquetado (`HistGradientBoostingClassifier` + preprocesador grupal). |
-| **`model_metadata.json`** | Metadatos, umbrales y tablas de referencia para inferencia web. |
-| **`index.html`** | Aplicación web interactiva autónoma para GitHub Pages (sin necesidad de servidor). |
-| **`practica_desnutricion_infantil.ipynb`** | Cuaderno de análisis exploratorio (EDA), entrenamiento y exportación. |
-| **`.streamlit/config.toml`** | Configuración de tema visual para Streamlit Cloud. |
-| **`.gitignore`** | Exclusión de archivos temporales y caches. |
+| **`app.py`** | Aplicación web interactiva en Streamlit. |
+| **`requirements.txt`** | Dependencias para despliegue en Streamlit Community Cloud. |
+| **`modelo_desnutricion.joblib`** | Modelo predictivo empaquetado (`HistGradientBoostingClassifier`). |
+| **`model_metadata.json`** | Metadatos y tablas de referencia para inferencia web. |
+| **`index.html`** | Aplicación web autónoma para GitHub Pages. |
+| **`practica_desnutricion_infantil.ipynb`** | Cuaderno con el proceso de análisis exploratorio, entrenamiento y validación. |
+| **`.streamlit/config.toml`** | Configuración de tema visual para el servidor Streamlit. |
+| **`.gitignore`** | Exclusión de archivos temporales, binarios y cachés locales. |
