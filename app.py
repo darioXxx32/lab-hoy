@@ -1,8 +1,23 @@
+import sys
+import os
+
+# Compatibilidad con deserialización de Cython en Scikit-Learn (Streamlit Cloud / Linux)
+try:
+    import sklearn._loss._loss as _loss_mod
+    sys.modules['_loss'] = _loss_mod
+except Exception:
+    pass
+
+try:
+    import numpy._core.multiarray as _numpy_multiarray
+    sys.modules['numpy.core.multiarray'] = _numpy_multiarray
+except Exception:
+    pass
+
 import streamlit as st
 import pandas as pd
 import numpy as np
 import joblib
-import os
 
 # Configuración de página
 st.set_page_config(
