@@ -274,4 +274,4 @@ with col_results:
         """)
 
 st.markdown("---")
-st.caption("Desarrollado por: Darío Pomasqui - Lab 8 | Práctica de Inteligencia Artificial")
+st.caption("Darío Pomasqui - Lab 8 | Profe, este csv es de la clase, lo trabajamos en la práctica para el midterm y cumple con los requisitos de ser trabajado en la clase por nosotros mismos.")

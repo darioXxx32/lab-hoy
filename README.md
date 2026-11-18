@@ -69,7 +69,8 @@ Para ejecutar la aplicación localmente:
 
 ---
 
-## Autor
+**Darío Pomasqui - Lab 8**
 
-**Darío Pomasqui** - Lab 8 | Inteligencia Artificial
+> Profe, este csv es de la clase, lo trabajamos en la práctica para el midterm y cumple con los requisitos de ser trabajado en la clase por nosotros mismos.
+
 
