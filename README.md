@@ -66,3 +66,10 @@ Para ejecutar la aplicación localmente:
 | **`practica_desnutricion_infantil.ipynb`** | Cuaderno con el proceso de análisis exploratorio, entrenamiento y validación. |
 | **`.streamlit/config.toml`** | Configuración de tema visual para el servidor Streamlit. |
 | **`.gitignore`** | Exclusión de archivos temporales, binarios y cachés locales. |
+
+---
+
+## Autor
+
+**Darío Pomasqui** - Lab 8 | Inteligencia Artificial
+

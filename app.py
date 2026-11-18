@@ -274,4 +274,4 @@ with col_results:
         """)
 
 st.markdown("---")
-st.caption("Práctica de Inteligencia Artificial - Universidad / Proyecto Desnutrición Infantil Ecuador.")
+st.caption("Desarrollado por: Darío Pomasqui - Lab 8 | Práctica de Inteligencia Artificial")
