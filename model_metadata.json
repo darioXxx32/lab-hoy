@@ -1,0 +1,2247 @@
+{
+  "threshold": 0.2,
+  "feature_cols": [
+    "edad_meses",
+    "peso_kg",
+    "talla_cm",
+    "edu_ord",
+    "sexo_num",
+    "region_num",
+    "peso_isna",
+    "talla_isna",
+    "edad_is_neg",
+    "edad_abs",
+    "edad_pos",
+    "peso_clean",
+    "talla_clean",
+    "height_m",
+    "bmi",
+    "w_h_ratio",
+    "w_age_ratio",
+    "h_age_ratio",
+    "peso_clean_diff_age_sex",
+    "peso_clean_z_age_sex",
+    "talla_clean_diff_age_sex",
+    "talla_clean_z_age_sex",
+    "bmi_diff_age_sex",
+    "bmi_z_age_sex",
+    "peso_clean_diff_age_reg",
+    "peso_clean_z_age_reg",
+    "talla_clean_diff_age_reg",
+    "talla_clean_z_age_reg",
+    "bmi_diff_age_reg",
+    "bmi_z_age_reg",
+    "peso_clean_diff_reg_edu",
+    "peso_clean_z_reg_edu",
+    "talla_clean_diff_reg_edu",
+    "talla_clean_z_reg_edu",
+    "bmi_diff_reg_edu",
+    "bmi_z_reg_edu",
+    "sexo_F",
+    "sexo_M",
+    "region_Amazonia",
+    "region_Costa",
+    "region_Insular",
+    "region_Sierra",
+    "nivel_educacion_madre_Primaria",
+    "nivel_educacion_madre_Secundaria",
+    "nivel_educacion_madre_Sin escolaridad",
+    "nivel_educacion_madre_Superior"
+  ],
+  "global_stats": {
+    "peso_clean_mean": 6.680304331120985,
+    "peso_clean_std": 3.0974940352779283,
+    "talla_clean_mean": 67.48003493641765,
+    "talla_clean_std": 11.937072210055517,
+    "bmi_mean": 14.29778577097564,
+    "bmi_std": 5.991345190006901
+  },
+  "group_lookups": {
+    "age_sex": {
+      "cols": [
+        "edad_meses",
+        "sexo"
+      ],
+      "table": {
+        "-12_F": {
+          "peso_clean_mean": 6.79272253191736,
+          "peso_clean_std": 4.869968782477264,
+          "talla_clean_mean": 65.12500884794959,
+          "talla_clean_std": 11.436684908557305,
+          "bmi_mean": 14.68217206682613,
+          "bmi_std": 6.5511985175890715
+        },
+        "-12_M": {
+          "peso_clean_mean": 6.928886834806517,
+          "peso_clean_std": 2.300837803360889,
+          "talla_clean_mean": 68.87433383684197,
+          "talla_clean_std": 10.954288376246772,
+          "bmi_mean": 15.012707299521091,
+          "bmi_std": 3.073846005294347
+        },
+        "-11_F": {
+          "peso_clean_mean": 6.600450039335273,
+          "peso_clean_std": 2.2286885833698125,
+          "talla_clean_mean": 70.50652698654791,
+          "talla_clean_std": 10.847166367059696,
+          "bmi_mean": 12.915044270543687,
+          "bmi_std": 2.8661073076705637
+        },
+        "-11_M": {
+          "peso_clean_mean": 6.1132216034840186,
+          "peso_clean_std": 2.218645750046734,
+          "talla_clean_mean": 67.05211491457425,
+          "talla_clean_std": 10.781151722504907,
+          "bmi_mean": 13.822749867531783,
+          "bmi_std": 2.690705546887322
+        },
+        "-10_F": {
+          "peso_clean_mean": 6.654896719113174,
+          "peso_clean_std": 2.166922452867282,
+          "talla_clean_mean": 68.49519054095576,
+          "talla_clean_std": 10.438241662592194,
+          "bmi_mean": 14.543116133206999,
+          "bmi_std": 2.360375337018268
+        },
+        "-10_M": {
+          "peso_clean_mean": 7.258843632119341,
+          "peso_clean_std": 2.4938254038364205,
+          "talla_clean_mean": 68.86193244075507,
+          "talla_clean_std": 11.661744590479602,
+          "bmi_mean": 14.279774746855187,
+          "bmi_std": 2.4988997518890352
+        },
+        "-9_F": {
+          "peso_clean_mean": 7.311155832569893,
+          "peso_clean_std": 4.42227324899627,
+          "talla_clean_mean": 72.46464431794706,
+          "talla_clean_std": 11.967491959215197,
+          "bmi_mean": 14.12480119830341,
+          "bmi_std": 6.095559955694266
+        },
+        "-9_M": {
+          "peso_clean_mean": 6.27042321879856,
+          "peso_clean_std": 3.0120356897413156,
+          "talla_clean_mean": 67.10001098702429,
+          "talla_clean_std": 14.20577322556756,
+          "bmi_mean": 12.487450288183085,
+          "bmi_std": 3.798944799000915
+        },
+        "-8_F": {
+          "peso_clean_mean": 6.716537869591415,
+          "peso_clean_std": 2.5955010376450773,
+          "talla_clean_mean": 67.68207434078629,
+          "talla_clean_std": 12.43029273046729,
+          "bmi_mean": 14.641280812232473,
+          "bmi_std": 3.4851030771656064
+        },
+        "-8_M": {
+          "peso_clean_mean": 6.403813799537272,
+          "peso_clean_std": 2.4861372334456022,
+          "talla_clean_mean": 68.00312820451792,
+          "talla_clean_std": 11.502464929783462,
+          "bmi_mean": 13.77522311356069,
+          "bmi_std": 3.077862606716365
+        },
+        "-7_F": {
+          "peso_clean_mean": 7.153518037432771,
+          "peso_clean_std": 4.002741956659716,
+          "talla_clean_mean": 69.5917010949471,
+          "talla_clean_std": 11.577148339059057,
+          "bmi_mean": 15.61144530438355,
+          "bmi_std": 12.331486922840197
+        },
+        "-7_M": {
+          "peso_clean_mean": 6.449284301403655,
+          "peso_clean_std": 2.2699678987613376,
+          "talla_clean_mean": 68.54834705944802,
+          "talla_clean_std": 13.111241120322294,
+          "bmi_mean": 13.633751351291114,
+          "bmi_std": 3.6855745058653175
+        },
+        "-6_F": {
+          "peso_clean_mean": 6.117478026069884,
+          "peso_clean_std": 2.279186870567011,
+          "talla_clean_mean": 66.33259198841569,
+          "talla_clean_std": 11.414621849010905,
+          "bmi_mean": 14.256484970713705,
+          "bmi_std": 3.066922885170725
+        },
+        "-6_M": {
+          "peso_clean_mean": 7.789983674282331,
+          "peso_clean_std": 4.432332807634881,
+          "talla_clean_mean": 70.76731205615746,
+          "talla_clean_std": 12.595860398591713,
+          "bmi_mean": 16.135771405998344,
+          "bmi_std": 10.39785934904145
+        },
+        "-5_F": {
+          "peso_clean_mean": 3.630811440851188,
+          "peso_clean_std": 2.902734946884548,
+          "talla_clean_mean": 51.09024232897588,
+          "talla_clean_std": 6.685860478340082,
+          "bmi_mean": 13.718606499327258,
+          "bmi_std": 11.827982281491403
+        },
+        "-5_M": {
+          "peso_clean_mean": 3.639517245423809,
+          "peso_clean_std": 3.258457916705453,
+          "talla_clean_mean": 51.518770161690775,
+          "talla_clean_std": 6.720249264716433,
+          "bmi_mean": 13.825127075398536,
+          "bmi_std": 12.502718788977262
+        },
+        "-4_F": {
+          "peso_clean_mean": 3.4202553733911882,
+          "peso_clean_std": 2.057023555445156,
+          "talla_clean_mean": 52.28472639647364,
+          "talla_clean_std": 7.790877546486426,
+          "bmi_mean": 12.08438715726971,
+          "bmi_std": 4.3037636699949
+        },
+        "-4_M": {
+          "peso_clean_mean": 3.638233201191228,
+          "peso_clean_std": 2.7901994110889894,
+          "talla_clean_mean": 51.6320598395195,
+          "talla_clean_std": 6.847732916062888,
+          "bmi_mean": 13.571549729560498,
+          "bmi_std": 10.46372235245978
+        },
+        "-3_F": {
+          "peso_clean_mean": 3.5400079691414756,
+          "peso_clean_std": 2.6001047831335105,
+          "talla_clean_mean": 51.61966685970661,
+          "talla_clean_std": 6.235040343674217,
+          "bmi_mean": 13.208253453218031,
+          "bmi_std": 9.058229059889953
+        },
+        "-3_M": {
+          "peso_clean_mean": 3.61316456040563,
+          "peso_clean_std": 2.8704771393046964,
+          "talla_clean_mean": 52.06849264873123,
+          "talla_clean_std": 7.393711950182478,
+          "bmi_mean": 12.873575094309402,
+          "bmi_std": 9.995419528414594
+        },
+        "-2_F": {
+          "peso_clean_mean": 3.810321279635072,
+          "peso_clean_std": 3.7263126967485025,
+          "talla_clean_mean": 52.060051177239686,
+          "talla_clean_std": 7.424911708785287,
+          "bmi_mean": 13.453586208276137,
+          "bmi_std": 11.732627060244841
+        },
+        "-2_M": {
+          "peso_clean_mean": 3.4772308427590555,
+          "peso_clean_std": 2.2838613666607492,
+          "talla_clean_mean": 51.34566185730096,
+          "talla_clean_std": 6.35988152018235,
+          "bmi_mean": 13.196073017582854,
+          "bmi_std": 9.677451541505613
+        },
+        "-1_F": {
+          "peso_clean_mean": 3.515351142038111,
+          "peso_clean_std": 3.0095068966852687,
+          "talla_clean_mean": 51.64572056582281,
+          "talla_clean_std": 7.170472413064097,
+          "bmi_mean": 13.324185391260789,
+          "bmi_std": 12.146757428176292
+        },
+        "-1_M": {
+          "peso_clean_mean": 3.4856421870554604,
+          "peso_clean_std": 2.316399620885803,
+          "talla_clean_mean": 51.51626553625753,
+          "talla_clean_std": 7.013454895537027,
+          "bmi_mean": 13.104380268656088,
+          "bmi_std": 8.080613168422373
+        },
+        "0_F": {
+          "peso_clean_mean": 3.16277526540019,
+          "peso_clean_std": 2.372135979182606,
+          "talla_clean_mean": 49.88317535196895,
+          "talla_clean_std": 3.437273467038016,
+          "bmi_mean": 12.925545285714085,
+          "bmi_std": 9.800494521581875
+        },
+        "0_M": {
+          "peso_clean_mean": 3.2471863421235723,
+          "peso_clean_std": 2.4979213398542854,
+          "talla_clean_mean": 49.88239543764298,
+          "talla_clean_std": 3.5497987101013515,
+          "bmi_mean": 13.315166101848462,
+          "bmi_std": 10.77099275807396
+        },
+        "1_F": {
+          "peso_clean_mean": 3.4320921608715027,
+          "peso_clean_std": 2.0660037674462766,
+          "talla_clean_mean": 51.487242863382555,
+          "talla_clean_std": 3.623858354956058,
+          "bmi_mean": 13.03631782873842,
+          "bmi_std": 7.683973834218013
+        },
+        "1_M": {
+          "peso_clean_mean": 3.504452845843552,
+          "peso_clean_std": 2.3066288885471797,
+          "talla_clean_mean": 51.33094239000996,
+          "talla_clean_std": 3.3915477525285116,
+          "bmi_mean": 13.441309569875974,
+          "bmi_std": 8.742457044828596
+        },
+        "2_F": {
+          "peso_clean_mean": 3.714268712058102,
+          "peso_clean_std": 1.7961102481590407,
+          "talla_clean_mean": 53.123725570855015,
+          "talla_clean_std": 3.441867715917174,
+          "bmi_mean": 13.308807275555859,
+          "bmi_std": 6.9721253398679535
+        },
+        "2_M": {
+          "peso_clean_mean": 3.8179091042764677,
+          "peso_clean_std": 2.474992764307222,
+          "talla_clean_mean": 53.04221470752731,
+          "talla_clean_std": 3.413025436614682,
+          "bmi_mean": 13.753968099277905,
+          "bmi_std": 9.085591068086774
+        },
+        "3_F": {
+          "peso_clean_mean": 4.085246689180802,
+          "peso_clean_std": 2.2723868087538874,
+          "talla_clean_mean": 54.514384227566296,
+          "talla_clean_std": 3.5377836172554327,
+          "bmi_mean": 13.902364995959044,
+          "bmi_std": 8.308816295469247
+        },
+        "3_M": {
+          "peso_clean_mean": 4.119622039075979,
+          "peso_clean_std": 2.2767281709763303,
+          "talla_clean_mean": 54.448839357626035,
+          "talla_clean_std": 3.51445640768573,
+          "bmi_mean": 14.084530468532451,
+          "bmi_std": 8.208398248289976
+        },
+        "4_F": {
+          "peso_clean_mean": 4.406398052036648,
+          "peso_clean_std": 2.456026927086611,
+          "talla_clean_mean": 55.93437363129653,
+          "talla_clean_std": 3.410810586252583,
+          "bmi_mean": 14.324240588625322,
+          "bmi_std": 8.62902299384489
+        },
+        "4_M": {
+          "peso_clean_mean": 4.311024403183625,
+          "peso_clean_std": 1.8714199951250916,
+          "talla_clean_mean": 56.13519780138878,
+          "talla_clean_std": 3.4747818104453385,
+          "bmi_mean": 13.790122280455233,
+          "bmi_std": 6.088536459650268
+        },
+        "5_F": {
+          "peso_clean_mean": 4.660958251844071,
+          "peso_clean_std": 2.1749467422069966,
+          "talla_clean_mean": 57.45223206134158,
+          "talla_clean_std": 3.603780517909975,
+          "bmi_mean": 14.235264839162877,
+          "bmi_std": 6.3974213971361555
+        },
+        "5_M": {
+          "peso_clean_mean": 4.744707706592401,
+          "peso_clean_std": 2.5944569971989155,
+          "talla_clean_mean": 57.66110501111025,
+          "talla_clean_std": 3.579870587260716,
+          "bmi_mean": 14.40819274370946,
+          "bmi_std": 7.814155714819276
+        },
+        "6_F": {
+          "peso_clean_mean": 5.0241041305535505,
+          "peso_clean_std": 2.123248954920293,
+          "talla_clean_mean": 58.949716500252435,
+          "talla_clean_std": 3.482599343386702,
+          "bmi_mean": 14.541179686854909,
+          "bmi_std": 6.256328526052188
+        },
+        "6_M": {
+          "peso_clean_mean": 5.087782530502255,
+          "peso_clean_std": 2.3460736917842655,
+          "talla_clean_mean": 59.0313758804121,
+          "talla_clean_std": 3.400820756714085,
+          "bmi_mean": 14.778904249319575,
+          "bmi_std": 7.225596973200269
+        },
+        "7_F": {
+          "peso_clean_mean": 5.2037657865580265,
+          "peso_clean_std": 1.6858479780269329,
+          "talla_clean_mean": 60.58177245826182,
+          "talla_clean_std": 3.481232417314704,
+          "bmi_mean": 14.329742727250556,
+          "bmi_std": 4.963638946559111
+        },
+        "7_M": {
+          "peso_clean_mean": 5.271393940939257,
+          "peso_clean_std": 2.233177013094007,
+          "talla_clean_mean": 60.469099334705035,
+          "talla_clean_std": 3.439871102559763,
+          "bmi_mean": 14.623682664621809,
+          "bmi_std": 6.534053427052947
+        },
+        "8_F": {
+          "peso_clean_mean": 5.570474426777986,
+          "peso_clean_std": 2.2516737422100865,
+          "talla_clean_mean": 62.02704450153482,
+          "talla_clean_std": 3.618343760148911,
+          "bmi_mean": 14.655018317872905,
+          "bmi_std": 6.355161599311961
+        },
+        "8_M": {
+          "peso_clean_mean": 5.52450420093203,
+          "peso_clean_std": 1.6137246466408428,
+          "talla_clean_mean": 61.91334323262485,
+          "talla_clean_std": 3.5769020637879754,
+          "bmi_mean": 14.555154891458512,
+          "bmi_std": 4.742951043606458
+        },
+        "9_F": {
+          "peso_clean_mean": 5.801087716339641,
+          "peso_clean_std": 1.7558158192781137,
+          "talla_clean_mean": 63.5789946826767,
+          "talla_clean_std": 3.5347601665389616,
+          "bmi_mean": 14.508696092103806,
+          "bmi_std": 4.757967408214071
+        },
+        "9_M": {
+          "peso_clean_mean": 5.873144188169788,
+          "peso_clean_std": 2.1536552366027717,
+          "talla_clean_mean": 63.507420480115634,
+          "talla_clean_std": 3.406369617028142,
+          "bmi_mean": 14.623576077132773,
+          "bmi_std": 5.035587148360909
+        },
+        "10_F": {
+          "peso_clean_mean": 6.271736514499157,
+          "peso_clean_std": 2.511512995748448,
+          "talla_clean_mean": 65.0047208299347,
+          "talla_clean_std": 3.625224287372628,
+          "bmi_mean": 15.066355801626463,
+          "bmi_std": 6.695873806025908
+        },
+        "10_M": {
+          "peso_clean_mean": 6.183217357790412,
+          "peso_clean_std": 2.2310445714638285,
+          "talla_clean_mean": 65.03601318094121,
+          "talla_clean_std": 3.544247154240252,
+          "bmi_mean": 14.646086442584116,
+          "bmi_std": 5.219641374345665
+        },
+        "11_F": {
+          "peso_clean_mean": 6.577597829317435,
+          "peso_clean_std": 2.3985620146239373,
+          "talla_clean_mean": 66.47318765319046,
+          "talla_clean_std": 3.632227005282318,
+          "bmi_mean": 15.018425175247721,
+          "bmi_std": 5.648400957344639
+        },
+        "11_M": {
+          "peso_clean_mean": 6.467431465174576,
+          "peso_clean_std": 2.1497836734840576,
+          "talla_clean_mean": 66.56510451896261,
+          "talla_clean_std": 3.4327208844446724,
+          "bmi_mean": 14.772794124805404,
+          "bmi_std": 5.5976170006844175
+        },
+        "12_F": {
+          "peso_clean_mean": 6.7975399411254775,
+          "peso_clean_std": 2.2327133592197845,
+          "talla_clean_mean": 68.02886727626708,
+          "talla_clean_std": 3.6471665622778118,
+          "bmi_mean": 14.882764585258666,
+          "bmi_std": 5.263081724091409
+        },
+        "12_M": {
+          "peso_clean_mean": 6.827951552148648,
+          "peso_clean_std": 2.327739660533953,
+          "talla_clean_mean": 67.91683548908942,
+          "talla_clean_std": 3.475192191216868,
+          "bmi_mean": 14.883721655935197,
+          "bmi_std": 5.364166333940106
+        },
+        "13_F": {
+          "peso_clean_mean": 7.00556272262875,
+          "peso_clean_std": 1.904955853235454,
+          "talla_clean_mean": 69.511584683874,
+          "talla_clean_std": 3.530143195941653,
+          "bmi_mean": 14.610724328885453,
+          "bmi_std": 4.114437553404933
+        },
+        "13_M": {
+          "peso_clean_mean": 7.121098848252154,
+          "peso_clean_std": 2.2640036009771984,
+          "talla_clean_mean": 69.42906453158722,
+          "talla_clean_std": 3.38369131204676,
+          "bmi_mean": 14.896801654085845,
+          "bmi_std": 5.150501900836298
+        },
+        "14_F": {
+          "peso_clean_mean": 7.430290804768895,
+          "peso_clean_std": 2.223014453364368,
+          "talla_clean_mean": 71.07389862709239,
+          "talla_clean_std": 3.431034258977593,
+          "bmi_mean": 14.763674283532028,
+          "bmi_std": 4.622225000024576
+        },
+        "14_M": {
+          "peso_clean_mean": 7.399539816176275,
+          "peso_clean_std": 2.1373786763178457,
+          "talla_clean_mean": 71.01332153288745,
+          "talla_clean_std": 3.4765700868923335,
+          "bmi_mean": 14.852292456840706,
+          "bmi_std": 4.810456316334643
+        },
+        "15_F": {
+          "peso_clean_mean": 7.707576250022101,
+          "peso_clean_std": 2.1139212926491426,
+          "talla_clean_mean": 72.55269524502786,
+          "talla_clean_std": 3.625796292150372,
+          "bmi_mean": 14.770601370234692,
+          "bmi_std": 4.532245188514755
+        },
+        "15_M": {
+          "peso_clean_mean": 7.690843383038336,
+          "peso_clean_std": 1.9631129488024717,
+          "talla_clean_mean": 72.59743489857019,
+          "talla_clean_std": 3.6257243563692385,
+          "bmi_mean": 14.732112689535127,
+          "bmi_std": 4.117718602962481
+        },
+        "16_F": {
+          "peso_clean_mean": 8.083031893955809,
+          "peso_clean_std": 2.317897233909267,
+          "talla_clean_mean": 74.05016287423328,
+          "talla_clean_std": 3.537417483964204,
+          "bmi_mean": 14.888599378117329,
+          "bmi_std": 4.758916377638892
+        },
+        "16_M": {
+          "peso_clean_mean": 7.973228976055621,
+          "peso_clean_std": 2.2194768249757035,
+          "talla_clean_mean": 74.17825184787664,
+          "talla_clean_std": 3.664798363452205,
+          "bmi_mean": 14.696052476618274,
+          "bmi_std": 4.523430374137528
+        },
+        "17_F": {
+          "peso_clean_mean": 8.30820614813258,
+          "peso_clean_std": 1.9700324790044523,
+          "talla_clean_mean": 75.38024247973188,
+          "talla_clean_std": 3.574315031056439,
+          "bmi_mean": 14.679216160607478,
+          "bmi_std": 3.774727288772186
+        },
+        "17_M": {
+          "peso_clean_mean": 8.238346390688944,
+          "peso_clean_std": 2.0192162628155232,
+          "talla_clean_mean": 75.4795803776194,
+          "talla_clean_std": 3.427259437190686,
+          "bmi_mean": 14.554763454607155,
+          "bmi_std": 4.02877688586735
+        },
+        "18_F": {
+          "peso_clean_mean": 8.65715150836624,
+          "peso_clean_std": 2.174680237461009,
+          "talla_clean_mean": 77.0919828661571,
+          "talla_clean_std": 3.663477797941906,
+          "bmi_mean": 14.615817722927378,
+          "bmi_std": 3.7367523373535843
+        },
+        "18_M": {
+          "peso_clean_mean": 8.5139328789997,
+          "peso_clean_std": 1.7690722748345722,
+          "talla_clean_mean": 77.17022785203746,
+          "talla_clean_std": 3.3560820729187206,
+          "bmi_mean": 14.274955979595836,
+          "bmi_std": 2.9386878230649294
+        },
+        "19_F": {
+          "peso_clean_mean": 8.852958827744601,
+          "peso_clean_std": 1.9448087146130464,
+          "talla_clean_mean": 78.40875525085026,
+          "talla_clean_std": 3.4170026055540466,
+          "bmi_mean": 14.455857625577783,
+          "bmi_std": 3.2170664552059307
+        },
+        "19_M": {
+          "peso_clean_mean": 8.822168896852103,
+          "peso_clean_std": 1.75840736087945,
+          "talla_clean_mean": 78.462039305951,
+          "talla_clean_std": 3.490800099217626,
+          "bmi_mean": 14.429511452489157,
+          "bmi_std": 3.161279958222584
+        },
+        "20_F": {
+          "peso_clean_mean": 9.210792307340721,
+          "peso_clean_std": 1.8681614674854334,
+          "talla_clean_mean": 79.77721171173134,
+          "talla_clean_std": 3.6982793342306817,
+          "bmi_mean": 14.597544921655665,
+          "bmi_std": 3.4691023524504208
+        },
+        "20_M": {
+          "peso_clean_mean": 9.15323218972803,
+          "peso_clean_std": 1.7835535681877395,
+          "talla_clean_mean": 80.0657679178184,
+          "talla_clean_std": 3.505382935681037,
+          "bmi_mean": 14.38285136238074,
+          "bmi_std": 3.284286493611442
+        },
+        "21_F": {
+          "peso_clean_mean": 9.473177836377253,
+          "peso_clean_std": 1.908904558542587,
+          "talla_clean_mean": 81.38859851468833,
+          "talla_clean_std": 3.5590852784564233,
+          "bmi_mean": 14.385260332550768,
+          "bmi_std": 3.25296043485845
+        },
+        "21_M": {
+          "peso_clean_mean": 9.433606496070903,
+          "peso_clean_std": 1.8292566902559106,
+          "talla_clean_mean": 81.42506636423768,
+          "talla_clean_std": 3.502859706990532,
+          "bmi_mean": 14.336205952152065,
+          "bmi_std": 3.0321581293746593
+        },
+        "22_F": {
+          "peso_clean_mean": 9.76545117495719,
+          "peso_clean_std": 1.8565148211243299,
+          "talla_clean_mean": 83.07453812632724,
+          "talla_clean_std": 3.386893721591881,
+          "bmi_mean": 14.220069539558656,
+          "bmi_std": 2.9526101641638745
+        },
+        "22_M": {
+          "peso_clean_mean": 9.866399099820526,
+          "peso_clean_std": 2.1009543442225116,
+          "talla_clean_mean": 83.14988573952725,
+          "talla_clean_std": 3.713098360552925,
+          "bmi_mean": 14.365321886158915,
+          "bmi_std": 3.2679592200229397
+        },
+        "23_F": {
+          "peso_clean_mean": 9.985329325846372,
+          "peso_clean_std": 1.553217082839721,
+          "talla_clean_mean": 84.67485213709719,
+          "talla_clean_std": 3.4799691654059686,
+          "bmi_mean": 14.013385176666027,
+          "bmi_std": 2.51713811117991
+        },
+        "23_M": {
+          "peso_clean_mean": 10.005504551563906,
+          "peso_clean_std": 1.613977907350662,
+          "talla_clean_mean": 84.57960123736265,
+          "talla_clean_std": 3.4442822155768438,
+          "bmi_mean": 14.0506540355114,
+          "bmi_std": 2.4394586742988467
+        },
+        "24_F": {
+          "peso_clean_mean": 10.372297399026904,
+          "peso_clean_std": 1.9322976083489956,
+          "talla_clean_mean": 86.30326380447764,
+          "talla_clean_std": 3.578994894886107,
+          "bmi_mean": 13.982798381028575,
+          "bmi_std": 2.8422778870736454
+        },
+        "24_M": {
+          "peso_clean_mean": 10.383684782005732,
+          "peso_clean_std": 1.5844841864303585,
+          "talla_clean_mean": 86.1382548106212,
+          "talla_clean_std": 3.6414910650382186,
+          "bmi_mean": 14.152670036262567,
+          "bmi_std": 2.7586809187661125
+        },
+        "25_F": {
+          "peso_clean_mean": 10.302540985260197,
+          "peso_clean_std": 1.844868758089771,
+          "talla_clean_mean": 86.28538727854581,
+          "talla_clean_std": 3.4327411760628816,
+          "bmi_mean": 13.811224418394888,
+          "bmi_std": 2.719097473455161
+        },
+        "25_M": {
+          "peso_clean_mean": 10.362065739133328,
+          "peso_clean_std": 1.7688145061059009,
+          "talla_clean_mean": 85.8913731692798,
+          "talla_clean_std": 3.517662071780061,
+          "bmi_mean": 14.139707257841046,
+          "bmi_std": 2.7307602662295047
+        },
+        "26_F": {
+          "peso_clean_mean": 10.293749238522242,
+          "peso_clean_std": 1.7152871236843878,
+          "talla_clean_mean": 85.83159228422186,
+          "talla_clean_std": 3.4237909349245075,
+          "bmi_mean": 13.92574487377338,
+          "bmi_std": 2.3402855978885366
+        },
+        "26_M": {
+          "peso_clean_mean": 10.328649804639133,
+          "peso_clean_std": 1.31305526395466,
+          "talla_clean_mean": 85.92116950626298,
+          "talla_clean_std": 3.5806949562617683,
+          "bmi_mean": 14.094516546626174,
+          "bmi_std": 2.0505010562479162
+        },
+        "27_F": {
+          "peso_clean_mean": 10.245267150892843,
+          "peso_clean_std": 1.3589450589742584,
+          "talla_clean_mean": 85.51456818775982,
+          "talla_clean_std": 3.6363695319835747,
+          "bmi_mean": 14.146690255162127,
+          "bmi_std": 2.371343201406627
+        },
+        "27_M": {
+          "peso_clean_mean": 10.282513872166287,
+          "peso_clean_std": 1.5712057936893262,
+          "talla_clean_mean": 86.19189089048297,
+          "talla_clean_std": 3.4512986194300144,
+          "bmi_mean": 13.906419566735535,
+          "bmi_std": 2.4105224445097364
+        },
+        "28_F": {
+          "peso_clean_mean": 10.337575611152351,
+          "peso_clean_std": 1.5492540765928358,
+          "talla_clean_mean": 85.80634840865693,
+          "talla_clean_std": 3.6328534524831575,
+          "bmi_mean": 14.123469765587433,
+          "bmi_std": 2.3929734484373504
+        },
+        "28_M": {
+          "peso_clean_mean": 10.406483686864686,
+          "peso_clean_std": 1.9208105003534144,
+          "talla_clean_mean": 86.17988310511734,
+          "talla_clean_std": 3.5149027654292735,
+          "bmi_mean": 14.011114050716229,
+          "bmi_std": 2.5443071850758647
+        },
+        "29_F": {
+          "peso_clean_mean": 10.324256780523713,
+          "peso_clean_std": 1.8527585618098217,
+          "talla_clean_mean": 85.77933164529365,
+          "talla_clean_std": 3.526797048053902,
+          "bmi_mean": 14.117328391223092,
+          "bmi_std": 2.8471102372154493
+        },
+        "29_M": {
+          "peso_clean_mean": 10.348646231364903,
+          "peso_clean_std": 1.74467919106885,
+          "talla_clean_mean": 86.0409113374167,
+          "talla_clean_std": 3.452781995437122,
+          "bmi_mean": 14.080278818553543,
+          "bmi_std": 2.8718516208731826
+        }
+      }
+    },
+    "age_reg": {
+      "cols": [
+        "edad_meses",
+        "region"
+      ],
+      "table": {
+        "-12_Amazonia": {
+          "peso_clean_mean": 6.8421383489129015,
+          "peso_clean_std": 2.437497731966928,
+          "talla_clean_mean": 67.68990133995759,
+          "talla_clean_std": 10.420148754651594,
+          "bmi_mean": 14.813169605801905,
+          "bmi_std": 2.918783172137531
+        },
+        "-12_Costa": {
+          "peso_clean_mean": 8.933450504000032,
+          "peso_clean_std": 7.473137399365876,
+          "talla_clean_mean": 71.30258427630865,
+          "talla_clean_std": 13.408626388448331,
+          "bmi_mean": 17.56750655392373,
+          "bmi_std": 10.018926395502056
+        },
+        "-12_Insular": {
+          "peso_clean_mean": 6.5338188606810235,
+          "peso_clean_std": 2.485845421863666,
+          "talla_clean_mean": 68.32637173038079,
+          "talla_clean_std": 10.135405978710669,
+          "bmi_mean": 13.542982948219903,
+          "bmi_std": 1.8433901153363177
+        },
+        "-12_Sierra": {
+          "peso_clean_mean": 5.983236014750395,
+          "peso_clean_std": 2.32404028768849,
+          "talla_clean_mean": 62.37266752921239,
+          "talla_clean_std": 11.02251468293565,
+          "bmi_mean": 14.144526909038156,
+          "bmi_std": 2.917514877759621
+        },
+        "-11_Amazonia": {
+          "peso_clean_mean": 6.634834816357447,
+          "peso_clean_std": 2.20848445144645,
+          "talla_clean_mean": 71.27428837718104,
+          "talla_clean_std": 10.761611718146508,
+          "bmi_mean": 12.796731568207605,
+          "bmi_std": 2.4380956771321682
+        },
+        "-11_Costa": {
+          "peso_clean_mean": 6.125965904933801,
+          "peso_clean_std": 2.770513825981041,
+          "talla_clean_mean": 65.74314908681926,
+          "talla_clean_std": 13.416203731356875,
+          "bmi_mean": 13.601238464144037,
+          "bmi_std": 4.053265532145428
+        },
+        "-11_Insular": {
+          "peso_clean_mean": 6.691119561546553,
+          "peso_clean_std": 1.322816546432963,
+          "talla_clean_mean": 69.18791269332989,
+          "talla_clean_std": 7.603679575392153,
+          "bmi_mean": 13.52525604004355,
+          "bmi_std": 1.7385042847959524
+        },
+        "-11_Sierra": {
+          "peso_clean_mean": 6.059003646341094,
+          "peso_clean_std": 2.4524025489895287,
+          "talla_clean_mean": 70.75982043514006,
+          "talla_clean_std": 10.908202569016108,
+          "bmi_mean": 13.22810947359113,
+          "bmi_std": 1.898689551986464
+        },
+        "-10_Amazonia": {
+          "peso_clean_mean": 6.559259522140971,
+          "peso_clean_std": 1.816367621939527,
+          "talla_clean_mean": 65.67360273230514,
+          "talla_clean_std": 10.797499082684904,
+          "bmi_mean": 14.302178072489893,
+          "bmi_std": 4.349083737329308
+        },
+        "-10_Costa": {
+          "peso_clean_mean": 6.663283157767303,
+          "peso_clean_std": 2.0451711198621267,
+          "talla_clean_mean": 68.17693773162686,
+          "talla_clean_std": 10.24328651531399,
+          "bmi_mean": 13.961204705087493,
+          "bmi_std": 1.3515409213119365
+        },
+        "-10_Insular": {
+          "peso_clean_mean": 6.526918410950786,
+          "peso_clean_std": 2.6192176670505334,
+          "talla_clean_mean": 69.84415020012078,
+          "talla_clean_std": 12.644105281630791,
+          "bmi_mean": 13.993679352705257,
+          "bmi_std": 1.6669679165221318
+        },
+        "-10_Sierra": {
+          "peso_clean_mean": 8.11031609732055,
+          "peso_clean_std": 2.5732409116759842,
+          "talla_clean_mean": 69.77000585618718,
+          "talla_clean_std": 11.157074656543664,
+          "bmi_mean": 15.482299247249438,
+          "bmi_std": 2.634951844478082
+        },
+        "-9_Amazonia": {
+          "peso_clean_mean": 6.688786169207994,
+          "peso_clean_std": 2.7827744408808077,
+          "talla_clean_mean": 70.40372400961148,
+          "talla_clean_std": 12.425172851635962,
+          "bmi_mean": 12.36339024586821,
+          "bmi_std": 3.615899390183795
+        },
+        "-9_Costa": {
+          "peso_clean_mean": 6.8195161115070935,
+          "peso_clean_std": 3.5123566441457683,
+          "talla_clean_mean": 79.68367116636864,
+          "talla_clean_std": 16.240164303508987,
+          "bmi_mean": 10.921394832911641,
+          "bmi_std": 5.170239545537576
+        },
+        "-9_Insular": {
+          "peso_clean_mean": 5.670123774740108,
+          "peso_clean_std": 2.4790247800008425,
+          "talla_clean_mean": 63.3225650304506,
+          "talla_clean_std": 10.748201063851596,
+          "bmi_mean": 12.42039903477052,
+          "bmi_std": 4.21626362236306
+        },
+        "-9_Sierra": {
+          "peso_clean_mean": 7.8887629665586365,
+          "peso_clean_std": 5.379411012177458,
+          "talla_clean_mean": 69.40349207906466,
+          "talla_clean_std": 14.055858327245552,
+          "bmi_mean": 15.319803002194135,
+          "bmi_std": 5.947586601043086
+        },
+        "-8_Amazonia": {
+          "peso_clean_mean": 7.048173036042799,
+          "peso_clean_std": 2.3458151102842777,
+          "talla_clean_mean": 67.14740991629105,
+          "talla_clean_std": 11.009644158329042,
+          "bmi_mean": 15.625925285594864,
+          "bmi_std": 3.8406364692745534
+        },
+        "-8_Costa": {
+          "peso_clean_mean": 6.948115277052087,
+          "peso_clean_std": 2.7340470449596,
+          "talla_clean_mean": 71.79782923559299,
+          "talla_clean_std": 13.114833960414018,
+          "bmi_mean": 12.989903568394713,
+          "bmi_std": 2.4336429938676463
+        },
+        "-8_Insular": {
+          "peso_clean_mean": 6.008011649472313,
+          "peso_clean_std": 2.5174962736259645,
+          "talla_clean_mean": 66.60821083097136,
+          "talla_clean_std": 12.031974935172363,
+          "bmi_mean": 13.782737176453379,
+          "bmi_std": 3.7075077427951806
+        },
+        "-8_Sierra": {
+          "peso_clean_mean": 5.754310056790027,
+          "peso_clean_std": 2.4786633686864135,
+          "talla_clean_mean": 64.27465681599068,
+          "talla_clean_std": 11.281372216753756,
+          "bmi_mean": 14.160095689243917,
+          "bmi_std": 1.1662631297852282
+        },
+        "-7_Amazonia": {
+          "peso_clean_mean": 7.882432377660192,
+          "peso_clean_std": 5.2392202872825795,
+          "talla_clean_mean": 66.81140935809721,
+          "talla_clean_std": 13.0545339609242,
+          "bmi_mean": 18.035693852085306,
+          "bmi_std": 16.183719357697505
+        },
+        "-7_Costa": {
+          "peso_clean_mean": 7.0794186919782325,
+          "peso_clean_std": 2.1463830729169575,
+          "talla_clean_mean": 73.51644546228528,
+          "talla_clean_std": 12.550644923750708,
+          "bmi_mean": 13.078325994395248,
+          "bmi_std": 2.3884737056689027
+        },
+        "-7_Insular": {
+          "peso_clean_mean": 6.398595565596378,
+          "peso_clean_std": 1.8962205543088178,
+          "talla_clean_mean": 69.80951471374117,
+          "talla_clean_std": 11.841467480220912,
+          "bmi_mean": 13.226011596414292,
+          "bmi_std": 2.9609128108347895
+        },
+        "-7_Sierra": {
+          "peso_clean_mean": 6.0969249183220215,
+          "peso_clean_std": 2.767707670266371,
+          "talla_clean_mean": 67.57413052827039,
+          "talla_clean_std": 12.124584630836528,
+          "bmi_mean": 13.582916021023172,
+          "bmi_std": 4.512422192759875
+        },
+        "-6_Amazonia": {
+          "peso_clean_mean": 5.181750496672344,
+          "peso_clean_std": 2.226933924207358,
+          "talla_clean_mean": 61.08571272072776,
+          "talla_clean_std": 9.842996894399066,
+          "bmi_mean": 13.489187671944528,
+          "bmi_std": 3.7101805841189153
+        },
+        "-6_Costa": {
+          "peso_clean_mean": 6.746820101901993,
+          "peso_clean_std": 1.9884178218148907,
+          "talla_clean_mean": 68.6009601672006,
+          "talla_clean_std": 12.936215455233985,
+          "bmi_mean": 14.837157893493263,
+          "bmi_std": 2.4204730345096017
+        },
+        "-6_Insular": {
+          "peso_clean_mean": 8.611934025530099,
+          "peso_clean_std": 5.892220167601628,
+          "talla_clean_mean": 70.90050195772395,
+          "talla_clean_std": 10.005098682804528,
+          "bmi_mean": 18.821996082297975,
+          "bmi_std": 15.212880778333046
+        },
+        "-6_Sierra": {
+          "peso_clean_mean": 7.4716859209899535,
+          "peso_clean_std": 2.7013152591464973,
+          "talla_clean_mean": 77.87855917808963,
+          "talla_clean_std": 10.342088370505834,
+          "bmi_mean": 13.711722714136016,
+          "bmi_std": 1.0553889495743218
+        },
+        "-5_Amazonia": {
+          "peso_clean_mean": 3.9378867182288153,
+          "peso_clean_std": 3.8311369776787005,
+          "talla_clean_mean": 51.65738544695333,
+          "talla_clean_std": 7.127974131679103,
+          "bmi_mean": 14.937825456083338,
+          "bmi_std": 15.869694170450147
+        },
+        "-5_Costa": {
+          "peso_clean_mean": 3.4297532894606837,
+          "peso_clean_std": 2.7134315935573405,
+          "talla_clean_mean": 51.051629301002464,
+          "talla_clean_std": 5.431001820404691,
+          "bmi_mean": 13.385854229378682,
+          "bmi_std": 11.601373938585043
+        },
+        "-5_Insular": {
+          "peso_clean_mean": 3.700836870704141,
+          "peso_clean_std": 3.0738702475432884,
+          "talla_clean_mean": 51.6180502387508,
+          "talla_clean_std": 8.175357600350416,
+          "bmi_mean": 13.211653876216605,
+          "bmi_std": 10.299475939999141
+        },
+        "-5_Sierra": {
+          "peso_clean_mean": 3.5044253159126777,
+          "peso_clean_std": 2.684210696424433,
+          "talla_clean_mean": 50.98585799723363,
+          "talla_clean_std": 5.91738210961212,
+          "bmi_mean": 13.619500617438636,
+          "bmi_std": 10.479543314399477
+        },
+        "-4_Amazonia": {
+          "peso_clean_mean": 3.16692326736931,
+          "peso_clean_std": 1.2683787629100671,
+          "talla_clean_mean": 51.260719359199555,
+          "talla_clean_std": 6.196618753174033,
+          "bmi_mean": 11.938936045501734,
+          "bmi_std": 4.0387531141542174
+        },
+        "-4_Costa": {
+          "peso_clean_mean": 3.744852541969435,
+          "peso_clean_std": 2.6602631869640105,
+          "talla_clean_mean": 52.3824857211326,
+          "talla_clean_std": 8.318804732991996,
+          "bmi_mean": 13.5849851962203,
+          "bmi_std": 9.84785603579774
+        },
+        "-4_Insular": {
+          "peso_clean_mean": 3.696784749858378,
+          "peso_clean_std": 2.9152959930108127,
+          "talla_clean_mean": 51.99105251015578,
+          "talla_clean_std": 7.56903247438941,
+          "bmi_mean": 13.048040505434072,
+          "bmi_std": 7.940446519431981
+        },
+        "-4_Sierra": {
+          "peso_clean_mean": 3.397846544954914,
+          "peso_clean_std": 2.4378340141409494,
+          "talla_clean_mean": 52.09559427842015,
+          "talla_clean_std": 6.817030924859484,
+          "bmi_mean": 12.46253315929252,
+          "bmi_std": 8.420657361830916
+        },
+        "-3_Amazonia": {
+          "peso_clean_mean": 3.296278151384858,
+          "peso_clean_std": 2.1295429615309183,
+          "talla_clean_mean": 51.60592994536717,
+          "talla_clean_std": 5.901625114460033,
+          "bmi_mean": 12.193004403005798,
+          "bmi_std": 6.813662338105465
+        },
+        "-3_Costa": {
+          "peso_clean_mean": 3.940735615822688,
+          "peso_clean_std": 3.847051189329447,
+          "talla_clean_mean": 52.03668167899609,
+          "talla_clean_std": 7.269552217263039,
+          "bmi_mean": 14.126204641503426,
+          "bmi_std": 14.013088335030671
+        },
+        "-3_Insular": {
+          "peso_clean_mean": 3.7409991060556265,
+          "peso_clean_std": 3.0900738713369176,
+          "talla_clean_mean": 52.391619790704,
+          "talla_clean_std": 7.566337019783889,
+          "bmi_mean": 13.505487785003174,
+          "bmi_std": 11.199239230132257
+        },
+        "-3_Sierra": {
+          "peso_clean_mean": 3.4248528238212517,
+          "peso_clean_std": 1.536371940691039,
+          "talla_clean_mean": 51.46324977413881,
+          "talla_clean_std": 6.825733854879417,
+          "bmi_mean": 12.625477432442324,
+          "bmi_std": 3.9980092960868783
+        },
+        "-2_Amazonia": {
+          "peso_clean_mean": 4.16886008971771,
+          "peso_clean_std": 4.063740710940033,
+          "talla_clean_mean": 52.52249033788831,
+          "talla_clean_std": 8.370966032698028,
+          "bmi_mean": 14.634848373616617,
+          "bmi_std": 13.907852043965285
+        },
+        "-2_Costa": {
+          "peso_clean_mean": 3.5851090608432634,
+          "peso_clean_std": 2.8746396022437586,
+          "talla_clean_mean": 51.71568619152014,
+          "talla_clean_std": 7.040128987710849,
+          "bmi_mean": 13.460492944597389,
+          "bmi_std": 11.012686600347495
+        },
+        "-2_Insular": {
+          "peso_clean_mean": 3.718121938004796,
+          "peso_clean_std": 3.2819195468037208,
+          "talla_clean_mean": 51.71878641344275,
+          "talla_clean_std": 6.998030830971198,
+          "bmi_mean": 13.40465618012153,
+          "bmi_std": 11.030209863489349
+        },
+        "-2_Sierra": {
+          "peso_clean_mean": 3.06399109720243,
+          "peso_clean_std": 1.3154201718199667,
+          "talla_clean_mean": 50.918018702646684,
+          "talla_clean_std": 4.908216123557043,
+          "bmi_mean": 11.807500387712242,
+          "bmi_std": 4.94432518679472
+        },
+        "-1_Amazonia": {
+          "peso_clean_mean": 3.196797446167934,
+          "peso_clean_std": 1.4637081180744556,
+          "talla_clean_mean": 51.53910839735872,
+          "talla_clean_std": 6.427637796645871,
+          "bmi_mean": 12.187686497515019,
+          "bmi_std": 5.2209552407162505
+        },
+        "-1_Costa": {
+          "peso_clean_mean": 3.539132811614185,
+          "peso_clean_std": 2.8992193124393393,
+          "talla_clean_mean": 51.399623313676926,
+          "talla_clean_std": 7.3166079603113765,
+          "bmi_mean": 13.471258747961912,
+          "bmi_std": 10.131740143674154
+        },
+        "-1_Insular": {
+          "peso_clean_mean": 3.6978808426880008,
+          "peso_clean_std": 3.3760122109288746,
+          "talla_clean_mean": 51.711142433891446,
+          "talla_clean_std": 7.337938556728404,
+          "bmi_mean": 13.747668860304318,
+          "bmi_std": 12.310374776096973
+        },
+        "-1_Sierra": {
+          "peso_clean_mean": 3.574421751472967,
+          "peso_clean_std": 2.7373849244005166,
+          "talla_clean_mean": 51.69451853064597,
+          "talla_clean_std": 7.308749991948389,
+          "bmi_mean": 13.481391526467029,
+          "bmi_std": 12.58875262285269
+        },
+        "0_Amazonia": {
+          "peso_clean_mean": 3.1496422566286317,
+          "peso_clean_std": 2.157195072882393,
+          "talla_clean_mean": 49.918048741791175,
+          "talla_clean_std": 3.325306697640838,
+          "bmi_mean": 12.692119143976425,
+          "bmi_std": 8.435701031444186
+        },
+        "0_Costa": {
+          "peso_clean_mean": 3.4096941739306597,
+          "peso_clean_std": 3.2116768470109958,
+          "talla_clean_mean": 49.8392516470824,
+          "talla_clean_std": 3.7658035189101358,
+          "bmi_mean": 14.128492295183811,
+          "bmi_std": 13.844229780396219
+        },
+        "0_Insular": {
+          "peso_clean_mean": 3.08665243536669,
+          "peso_clean_std": 2.040952662265181,
+          "talla_clean_mean": 49.82203610801509,
+          "talla_clean_std": 3.52892582159952,
+          "bmi_mean": 12.595902075796985,
+          "bmi_std": 8.773460582497757
+        },
+        "0_Sierra": {
+          "peso_clean_mean": 3.1783394381753993,
+          "peso_clean_std": 2.1575789740927673,
+          "talla_clean_mean": 49.94919790875536,
+          "talla_clean_std": 3.3494279169276737,
+          "bmi_mean": 13.070270683941517,
+          "bmi_std": 9.167381130933968
+        },
+        "1_Amazonia": {
+          "peso_clean_mean": 3.418778989672507,
+          "peso_clean_std": 2.1594876460783006,
+          "talla_clean_mean": 51.41702963767109,
+          "talla_clean_std": 3.605378813662745,
+          "bmi_mean": 13.209961917936472,
+          "bmi_std": 8.772562155304941
+        },
+        "1_Costa": {
+          "peso_clean_mean": 3.386407521623498,
+          "peso_clean_std": 1.8021340133558421,
+          "talla_clean_mean": 51.371251725408555,
+          "talla_clean_std": 3.545474020809912,
+          "bmi_mean": 12.867372408585464,
+          "bmi_std": 6.507670728641542
+        },
+        "1_Insular": {
+          "peso_clean_mean": 3.5107085924902774,
+          "peso_clean_std": 2.201600664124517,
+          "talla_clean_mean": 51.4203931289017,
+          "talla_clean_std": 3.3959077140753764,
+          "bmi_mean": 13.212233085437564,
+          "bmi_std": 7.57101184443497
+        },
+        "1_Sierra": {
+          "peso_clean_mean": 3.5547852147140975,
+          "peso_clean_std": 2.5205627243298627,
+          "talla_clean_mean": 51.43656814177972,
+          "talla_clean_std": 3.5059263410013424,
+          "bmi_mean": 13.62651076970773,
+          "bmi_std": 9.58049944231177
+        },
+        "2_Amazonia": {
+          "peso_clean_mean": 3.8152771077577823,
+          "peso_clean_std": 2.4006434785336714,
+          "talla_clean_mean": 53.079520610903224,
+          "talla_clean_std": 3.5319902095752456,
+          "bmi_mean": 13.694797044744233,
+          "bmi_std": 8.830940683751392
+        },
+        "2_Costa": {
+          "peso_clean_mean": 3.7533712120304523,
+          "peso_clean_std": 1.9955013910725825,
+          "talla_clean_mean": 53.0192712581354,
+          "talla_clean_std": 3.5130073833252906,
+          "bmi_mean": 13.491105696081577,
+          "bmi_std": 7.899323354279627
+        },
+        "2_Insular": {
+          "peso_clean_mean": 3.808837742052327,
+          "peso_clean_std": 2.2350834714654173,
+          "talla_clean_mean": 52.92847273703169,
+          "talla_clean_std": 3.214013988078638,
+          "bmi_mean": 13.67401209733583,
+          "bmi_std": 8.033094600641599
+        },
+        "2_Sierra": {
+          "peso_clean_mean": 3.6843562300106494,
+          "peso_clean_std": 2.0019581220338147,
+          "talla_clean_mean": 53.318327617114655,
+          "talla_clean_std": 3.4660158872898656,
+          "bmi_mean": 13.264000586306732,
+          "bmi_std": 7.685883053264658
+        },
+        "3_Amazonia": {
+          "peso_clean_mean": 4.051546145909652,
+          "peso_clean_std": 2.1390633915560704,
+          "talla_clean_mean": 54.742218352456426,
+          "talla_clean_std": 3.5527594656398502,
+          "bmi_mean": 13.685917367444576,
+          "bmi_std": 7.570098994537819
+        },
+        "3_Costa": {
+          "peso_clean_mean": 4.103625560920355,
+          "peso_clean_std": 2.2439474448824828,
+          "talla_clean_mean": 54.26382279842861,
+          "talla_clean_std": 3.571424947163871,
+          "bmi_mean": 14.103990102985897,
+          "bmi_std": 8.737226865578563
+        },
+        "3_Insular": {
+          "peso_clean_mean": 4.212720679623936,
+          "peso_clean_std": 2.542682523920831,
+          "talla_clean_mean": 54.41134465807249,
+          "talla_clean_std": 3.4308391654068546,
+          "bmi_mean": 14.425401927105662,
+          "bmi_std": 9.36652082484153
+        },
+        "3_Sierra": {
+          "peso_clean_mean": 4.035087845951644,
+          "peso_clean_std": 2.1332508482300527,
+          "talla_clean_mean": 54.52479919718999,
+          "talla_clean_std": 3.539166101327379,
+          "bmi_mean": 13.727787524408175,
+          "bmi_std": 7.046213948348837
+        },
+        "4_Amazonia": {
+          "peso_clean_mean": 4.338825559029603,
+          "peso_clean_std": 2.1136124944099217,
+          "talla_clean_mean": 56.005920392964384,
+          "talla_clean_std": 3.5185007875370284,
+          "bmi_mean": 13.873939625790932,
+          "bmi_std": 7.153209460304568
+        },
+        "4_Costa": {
+          "peso_clean_mean": 4.316645711832138,
+          "peso_clean_std": 2.0840778543916367,
+          "talla_clean_mean": 55.94620397855521,
+          "talla_clean_std": 3.3819107293250648,
+          "bmi_mean": 13.97748355803808,
+          "bmi_std": 6.557197961597047
+        },
+        "4_Insular": {
+          "peso_clean_mean": 4.382489541947757,
+          "peso_clean_std": 1.9305670708321143,
+          "talla_clean_mean": 56.08680787629149,
+          "talla_clean_std": 3.456026062094299,
+          "bmi_mean": 14.112534608034798,
+          "bmi_std": 6.534335820908954
+        },
+        "4_Sierra": {
+          "peso_clean_mean": 4.402923172453848,
+          "peso_clean_std": 2.58729358522715,
+          "talla_clean_mean": 56.09448642251965,
+          "talla_clean_std": 3.4199579692506776,
+          "bmi_mean": 14.294452533457058,
+          "bmi_std": 9.408993630123375
+        },
+        "5_Amazonia": {
+          "peso_clean_mean": 4.781114508959548,
+          "peso_clean_std": 2.669648324809586,
+          "talla_clean_mean": 57.42425731134959,
+          "talla_clean_std": 3.617394277958001,
+          "bmi_mean": 14.733315909034042,
+          "bmi_std": 8.544644338267153
+        },
+        "5_Costa": {
+          "peso_clean_mean": 4.672291915314347,
+          "peso_clean_std": 2.2439400267548275,
+          "talla_clean_mean": 57.36123972826653,
+          "talla_clean_std": 3.484702542513085,
+          "bmi_mean": 14.151847656866073,
+          "bmi_std": 6.118799449575772
+        },
+        "5_Insular": {
+          "peso_clean_mean": 4.772466258697844,
+          "peso_clean_std": 2.5597273813821735,
+          "talla_clean_mean": 57.617143726052085,
+          "talla_clean_std": 3.5857840667938836,
+          "bmi_mean": 14.353681236425198,
+          "bmi_std": 6.840891952777933
+        },
+        "5_Sierra": {
+          "peso_clean_mean": 4.594957384707576,
+          "peso_clean_std": 2.083015137368503,
+          "talla_clean_mean": 57.80438172164738,
+          "talla_clean_std": 3.6683679944400422,
+          "bmi_mean": 14.064406257794317,
+          "bmi_std": 6.827148428473846
+        },
+        "6_Amazonia": {
+          "peso_clean_mean": 5.041125213903877,
+          "peso_clean_std": 2.384176961469397,
+          "talla_clean_mean": 59.012199611859494,
+          "talla_clean_std": 3.557763145501124,
+          "bmi_mean": 14.460349034697723,
+          "bmi_std": 6.628648139920212
+        },
+        "6_Costa": {
+          "peso_clean_mean": 5.192873655946233,
+          "peso_clean_std": 2.500171251154572,
+          "talla_clean_mean": 58.92239308159641,
+          "talla_clean_std": 3.2799794862460665,
+          "bmi_mean": 15.015880078400176,
+          "bmi_std": 6.796926219293537
+        },
+        "6_Insular": {
+          "peso_clean_mean": 4.989387270086717,
+          "peso_clean_std": 2.0821082204986854,
+          "talla_clean_mean": 59.016468425423405,
+          "talla_clean_std": 3.4306083368330156,
+          "bmi_mean": 14.57069870296461,
+          "bmi_std": 6.963927578961328
+        },
+        "6_Sierra": {
+          "peso_clean_mean": 4.994824880407466,
+          "peso_clean_std": 1.9152117591948694,
+          "talla_clean_mean": 59.00619919302563,
+          "talla_clean_std": 3.506964723955072,
+          "bmi_mean": 14.565170759147307,
+          "bmi_std": 6.577331332439151
+        },
+        "7_Amazonia": {
+          "peso_clean_mean": 5.191984918741367,
+          "peso_clean_std": 1.8131347028899938,
+          "talla_clean_mean": 60.51125958873871,
+          "talla_clean_std": 3.5050099015594456,
+          "bmi_mean": 14.297841454926568,
+          "bmi_std": 5.542640386858704
+        },
+        "7_Costa": {
+          "peso_clean_mean": 5.145597547515962,
+          "peso_clean_std": 1.4786465555008306,
+          "talla_clean_mean": 60.537510817437116,
+          "talla_clean_std": 3.371849279985295,
+          "bmi_mean": 14.223503699273136,
+          "bmi_std": 4.149026619299348
+        },
+        "7_Insular": {
+          "peso_clean_mean": 5.225849834807232,
+          "peso_clean_std": 2.039009570811854,
+          "talla_clean_mean": 60.353370637153226,
+          "talla_clean_std": 3.4215549060382555,
+          "bmi_mean": 14.426795416254606,
+          "bmi_std": 5.498932976136591
+        },
+        "7_Sierra": {
+          "peso_clean_mean": 5.3958975374081035,
+          "peso_clean_std": 2.478656669415546,
+          "talla_clean_mean": 60.71503500649719,
+          "talla_clean_std": 3.543357163836409,
+          "bmi_mean": 15.002580918211919,
+          "bmi_std": 7.62878235927405
+        },
+        "8_Amazonia": {
+          "peso_clean_mean": 5.486181921448283,
+          "peso_clean_std": 1.3047135839509905,
+          "talla_clean_mean": 61.73933455795955,
+          "talla_clean_std": 3.631952749142292,
+          "bmi_mean": 14.492385317676531,
+          "bmi_std": 3.9170023920252044
+        },
+        "8_Costa": {
+          "peso_clean_mean": 5.579863464804318,
+          "peso_clean_std": 2.33095462479624,
+          "talla_clean_mean": 61.88151188822886,
+          "talla_clean_std": 3.560233813698563,
+          "bmi_mean": 14.741155977940986,
+          "bmi_std": 6.738856039870029
+        },
+        "8_Insular": {
+          "peso_clean_mean": 5.567504741343129,
+          "peso_clean_std": 1.880202171180728,
+          "talla_clean_mean": 62.10913743726614,
+          "talla_clean_std": 3.6363182093696866,
+          "bmi_mean": 14.571090664240222,
+          "bmi_std": 5.033780786387562
+        },
+        "8_Sierra": {
+          "peso_clean_mean": 5.557004743315076,
+          "peso_clean_std": 2.176661826919622,
+          "talla_clean_mean": 62.1398315539902,
+          "talla_clean_std": 3.555714649878042,
+          "bmi_mean": 14.620761239806663,
+          "bmi_std": 6.352838723244726
+        },
+        "9_Amazonia": {
+          "peso_clean_mean": 5.71056188801276,
+          "peso_clean_std": 1.2474609222184923,
+          "talla_clean_mean": 63.45810535617005,
+          "talla_clean_std": 3.5490608604523617,
+          "bmi_mean": 14.335608764916872,
+          "bmi_std": 3.5951940723301385
+        },
+        "9_Costa": {
+          "peso_clean_mean": 5.764177519663173,
+          "peso_clean_std": 1.6772133760435874,
+          "talla_clean_mean": 63.665941929154435,
+          "talla_clean_std": 3.297844249947497,
+          "bmi_mean": 14.410472556285232,
+          "bmi_std": 4.386535680132933
+        },
+        "9_Insular": {
+          "peso_clean_mean": 5.997352730052651,
+          "peso_clean_std": 2.6909956407961935,
+          "talla_clean_mean": 63.56770406607558,
+          "talla_clean_std": 3.4332470617583235,
+          "bmi_mean": 14.991536177017318,
+          "bmi_std": 6.7383706139692805
+        },
+        "9_Sierra": {
+          "peso_clean_mean": 5.884221007587797,
+          "peso_clean_std": 1.991400853865746,
+          "talla_clean_mean": 63.4880692426023,
+          "talla_clean_std": 3.603874128891472,
+          "bmi_mean": 14.560583088361948,
+          "bmi_std": 4.495770301968947
+        },
+        "10_Amazonia": {
+          "peso_clean_mean": 6.281791846841691,
+          "peso_clean_std": 2.4161928057088264,
+          "talla_clean_mean": 65.077249481731,
+          "talla_clean_std": 3.7605040358831037,
+          "bmi_mean": 15.050972176689681,
+          "bmi_std": 6.570665731966844
+        },
+        "10_Costa": {
+          "peso_clean_mean": 6.223742667794793,
+          "peso_clean_std": 2.504711206494014,
+          "talla_clean_mean": 65.07210821529924,
+          "talla_clean_std": 3.617739118357625,
+          "bmi_mean": 14.728617373194801,
+          "bmi_std": 5.511247190358153
+        },
+        "10_Insular": {
+          "peso_clean_mean": 6.2204497137441805,
+          "peso_clean_std": 2.461733105016778,
+          "talla_clean_mean": 64.9721783040092,
+          "talla_clean_std": 3.425645061142156,
+          "bmi_mean": 14.908866644614019,
+          "bmi_std": 6.4507130778084925
+        },
+        "10_Sierra": {
+          "peso_clean_mean": 6.1820447440702395,
+          "peso_clean_std": 2.088101323462738,
+          "talla_clean_mean": 64.96545398820788,
+          "talla_clean_std": 3.5356377276314546,
+          "bmi_mean": 14.71413646572206,
+          "bmi_std": 5.304894275719415
+        },
+        "11_Amazonia": {
+          "peso_clean_mean": 6.504283713528412,
+          "peso_clean_std": 2.4022728108113496,
+          "talla_clean_mean": 66.4841053753565,
+          "talla_clean_std": 3.559682611259947,
+          "bmi_mean": 14.827418275263165,
+          "bmi_std": 5.813897861455105
+        },
+        "11_Costa": {
+          "peso_clean_mean": 6.487007414548272,
+          "peso_clean_std": 2.0595069170804607,
+          "talla_clean_mean": 66.55900163456067,
+          "talla_clean_std": 3.5743564235724388,
+          "bmi_mean": 14.81974576545457,
+          "bmi_std": 5.136035583369293
+        },
+        "11_Insular": {
+          "peso_clean_mean": 6.616005234353506,
+          "peso_clean_std": 2.3459768191827393,
+          "talla_clean_mean": 66.47614689733712,
+          "talla_clean_std": 3.470926576521195,
+          "bmi_mean": 15.227258106518908,
+          "bmi_std": 6.082664839029508
+        },
+        "11_Sierra": {
+          "peso_clean_mean": 6.4742493888088894,
+          "peso_clean_std": 2.2866361754743667,
+          "talla_clean_mean": 66.56406540004267,
+          "talla_clean_std": 3.5191438978009817,
+          "bmi_mean": 14.667791566170255,
+          "bmi_std": 5.4218978043777675
+        },
+        "12_Amazonia": {
+          "peso_clean_mean": 6.9013326124551,
+          "peso_clean_std": 2.6815713516572144,
+          "talla_clean_mean": 67.91307422548233,
+          "talla_clean_std": 3.6069254829829416,
+          "bmi_mean": 15.141771675648963,
+          "bmi_std": 6.299157252256794
+        },
+        "12_Costa": {
+          "peso_clean_mean": 6.852374605013594,
+          "peso_clean_std": 2.290814845290408,
+          "talla_clean_mean": 67.91725467225383,
+          "talla_clean_std": 3.587612153751093,
+          "bmi_mean": 15.025341177146627,
+          "bmi_std": 5.5627502720384046
+        },
+        "12_Insular": {
+          "peso_clean_mean": 6.784161259534165,
+          "peso_clean_std": 2.2479719866373533,
+          "talla_clean_mean": 68.00898662505486,
+          "talla_clean_std": 3.46768883219967,
+          "bmi_mean": 14.688779280545091,
+          "bmi_std": 4.7825969119924245
+        },
+        "12_Sierra": {
+          "peso_clean_mean": 6.71151553378653,
+          "peso_clean_std": 1.799667705129921,
+          "talla_clean_mean": 68.05330228134285,
+          "talla_clean_std": 3.587287827138255,
+          "bmi_mean": 14.667638978013485,
+          "bmi_std": 4.34358271644937
+        },
+        "13_Amazonia": {
+          "peso_clean_mean": 7.188463042531671,
+          "peso_clean_std": 2.5862119019450467,
+          "talla_clean_mean": 69.42239496877495,
+          "talla_clean_std": 3.4006526952928446,
+          "bmi_mean": 14.836979596478407,
+          "bmi_std": 5.0330087255048745
+        },
+        "13_Costa": {
+          "peso_clean_mean": 7.015642842574788,
+          "peso_clean_std": 1.7160659299431713,
+          "talla_clean_mean": 69.42494248556986,
+          "talla_clean_std": 3.413476419164717,
+          "bmi_mean": 14.789721733510717,
+          "bmi_std": 4.278293186018656
+        },
+        "13_Insular": {
+          "peso_clean_mean": 7.158681234532804,
+          "peso_clean_std": 2.2945181041336213,
+          "talla_clean_mean": 69.39483373355883,
+          "talla_clean_std": 3.57305438186644,
+          "bmi_mean": 15.050614665494564,
+          "bmi_std": 5.228144072701959
+        },
+        "13_Sierra": {
+          "peso_clean_mean": 6.900247296858994,
+          "peso_clean_std": 1.6668295310165684,
+          "talla_clean_mean": 69.64169916392541,
+          "talla_clean_std": 3.4415613881078624,
+          "bmi_mean": 14.346161004362223,
+          "bmi_std": 4.060883621902937
+        },
+        "14_Amazonia": {
+          "peso_clean_mean": 7.339878217160812,
+          "peso_clean_std": 1.60164309503566,
+          "talla_clean_mean": 71.10564045352734,
+          "talla_clean_std": 3.338769030920792,
+          "bmi_mean": 14.597750765254574,
+          "bmi_std": 3.5572255904021555
+        },
+        "14_Costa": {
+          "peso_clean_mean": 7.440962699207557,
+          "peso_clean_std": 2.2578783677815655,
+          "talla_clean_mean": 70.91016699207901,
+          "talla_clean_std": 3.477005623852764,
+          "bmi_mean": 14.948206274793701,
+          "bmi_std": 4.983750287791722
+        },
+        "14_Insular": {
+          "peso_clean_mean": 7.417680771685847,
+          "peso_clean_std": 2.3679438399091994,
+          "talla_clean_mean": 71.2360152473602,
+          "talla_clean_std": 3.557557810365128,
+          "bmi_mean": 14.65196657922745,
+          "bmi_std": 4.778561334060847
+        },
+        "14_Sierra": {
+          "peso_clean_mean": 7.46263539150936,
+          "peso_clean_std": 2.3962905161605317,
+          "talla_clean_mean": 70.92647418625043,
+          "talla_clean_std": 3.4275735810318038,
+          "bmi_mean": 15.024127676200305,
+          "bmi_std": 5.324429194758484
+        },
+        "15_Amazonia": {
+          "peso_clean_mean": 7.618241638959137,
+          "peso_clean_std": 1.8745473835811157,
+          "talla_clean_mean": 72.6465795918826,
+          "talla_clean_std": 3.526260943543173,
+          "bmi_mean": 14.589332461966762,
+          "bmi_std": 4.047440383250507
+        },
+        "15_Costa": {
+          "peso_clean_mean": 7.762835116177054,
+          "peso_clean_std": 2.307092073410042,
+          "talla_clean_mean": 72.52053554850059,
+          "talla_clean_std": 3.7267077977474705,
+          "bmi_mean": 14.846951436665188,
+          "bmi_std": 4.694080270515374
+        },
+        "15_Insular": {
+          "peso_clean_mean": 7.646654461758256,
+          "peso_clean_std": 1.8630163174247354,
+          "talla_clean_mean": 72.36438209350231,
+          "talla_clean_std": 3.630854100668763,
+          "bmi_mean": 14.772791989641428,
+          "bmi_std": 4.214317250741064
+        },
+        "15_Sierra": {
+          "peso_clean_mean": 7.765189390012154,
+          "peso_clean_std": 2.0716051030847575,
+          "talla_clean_mean": 72.76123783724249,
+          "talla_clean_std": 3.6104445660245106,
+          "bmi_mean": 14.793475028371912,
+          "bmi_std": 4.338311317818427
+        },
+        "16_Amazonia": {
+          "peso_clean_mean": 8.085151719060184,
+          "peso_clean_std": 2.3733650896188965,
+          "talla_clean_mean": 74.14325045761164,
+          "talla_clean_std": 3.6847241165701496,
+          "bmi_mean": 14.964199784132738,
+          "bmi_std": 4.983669213659978
+        },
+        "16_Costa": {
+          "peso_clean_mean": 7.872534915999576,
+          "peso_clean_std": 1.931272662842396,
+          "talla_clean_mean": 74.08663452925006,
+          "talla_clean_std": 3.547121186153674,
+          "bmi_mean": 14.476210050744255,
+          "bmi_std": 3.900307180482889
+        },
+        "16_Insular": {
+          "peso_clean_mean": 8.183615616402589,
+          "peso_clean_std": 2.663378234908191,
+          "talla_clean_mean": 74.00157997122278,
+          "talla_clean_std": 3.5840367846963908,
+          "bmi_mean": 15.093080100655005,
+          "bmi_std": 5.281883248240471
+        },
+        "16_Sierra": {
+          "peso_clean_mean": 7.983045489045849,
+          "peso_clean_std": 2.039180764340942,
+          "talla_clean_mean": 74.22602460599548,
+          "talla_clean_std": 3.587320750971554,
+          "bmi_mean": 14.6618489405523,
+          "bmi_std": 4.2996553624639855
+        },
+        "17_Amazonia": {
+          "peso_clean_mean": 8.282698591587977,
+          "peso_clean_std": 2.0613117895947,
+          "talla_clean_mean": 75.48519177234131,
+          "talla_clean_std": 3.5272232351428023,
+          "bmi_mean": 14.629837737095055,
+          "bmi_std": 3.9501496482856
+        },
+        "17_Costa": {
+          "peso_clean_mean": 8.207430664201304,
+          "peso_clean_std": 1.7014933414364672,
+          "talla_clean_mean": 75.33526390854202,
+          "talla_clean_std": 3.541879041094438,
+          "bmi_mean": 14.465304177544073,
+          "bmi_std": 3.174993359883096
+        },
+        "17_Insular": {
+          "peso_clean_mean": 8.404209954157649,
+          "peso_clean_std": 2.4350517617729217,
+          "talla_clean_mean": 75.4716283228057,
+          "talla_clean_std": 3.50162593284987,
+          "bmi_mean": 14.873711090562304,
+          "bmi_std": 4.880132562274087
+        },
+        "17_Sierra": {
+          "peso_clean_mean": 8.201795765456215,
+          "peso_clean_std": 1.6879658302278229,
+          "talla_clean_mean": 75.42624173141562,
+          "talla_clean_std": 3.445803329083093,
+          "bmi_mean": 14.502813388610765,
+          "bmi_std": 3.377972276465289
+        },
+        "18_Amazonia": {
+          "peso_clean_mean": 8.70411663328646,
+          "peso_clean_std": 2.2895592587090072,
+          "talla_clean_mean": 77.2738576795809,
+          "talla_clean_std": 3.4587824147350865,
+          "bmi_mean": 14.619144713888858,
+          "bmi_std": 4.080935259149254
+        },
+        "18_Costa": {
+          "peso_clean_mean": 8.523489265181661,
+          "peso_clean_std": 1.928787942743336,
+          "talla_clean_mean": 77.10935649601196,
+          "talla_clean_std": 3.4073532829970232,
+          "bmi_mean": 14.22300131624091,
+          "bmi_std": 2.5986110133009945
+        },
+        "18_Insular": {
+          "peso_clean_mean": 8.667958885495333,
+          "peso_clean_std": 2.1013469218155416,
+          "talla_clean_mean": 77.17200356741414,
+          "talla_clean_std": 3.5896398047810716,
+          "bmi_mean": 14.5920373479217,
+          "bmi_std": 3.731090820564843
+        },
+        "18_Sierra": {
+          "peso_clean_mean": 8.455973112863369,
+          "peso_clean_std": 1.557370757615395,
+          "talla_clean_mean": 76.96751951894505,
+          "talla_clean_std": 3.6062868012836486,
+          "bmi_mean": 14.371077832243028,
+          "bmi_std": 2.8801894418474174
+        },
+        "19_Amazonia": {
+          "peso_clean_mean": 8.884721193803598,
+          "peso_clean_std": 2.036361971337712,
+          "talla_clean_mean": 78.4728893432677,
+          "talla_clean_std": 3.3184633039870746,
+          "bmi_mean": 14.449298662344031,
+          "bmi_std": 3.1730652766964385
+        },
+        "19_Costa": {
+          "peso_clean_mean": 8.925517019307378,
+          "peso_clean_std": 2.1685808795189527,
+          "talla_clean_mean": 78.57708173838974,
+          "talla_clean_std": 3.4714042760592756,
+          "bmi_mean": 14.568030472228832,
+          "bmi_std": 3.8989909806069987
+        },
+        "19_Insular": {
+          "peso_clean_mean": 8.765344908775473,
+          "peso_clean_std": 1.3793602731885002,
+          "talla_clean_mean": 78.41950035971281,
+          "talla_clean_std": 3.503363810641999,
+          "bmi_mean": 14.323583119408962,
+          "bmi_std": 2.526279190162349
+        },
+        "19_Sierra": {
+          "peso_clean_mean": 8.761189675212735,
+          "peso_clean_std": 1.6794509340991504,
+          "talla_clean_mean": 78.25622320261272,
+          "talla_clean_std": 3.5256023955191136,
+          "bmi_mean": 14.420999340701963,
+          "bmi_std": 2.944272686303272
+        },
+        "20_Amazonia": {
+          "peso_clean_mean": 9.01608983574975,
+          "peso_clean_std": 1.4876922287591392,
+          "talla_clean_mean": 79.98195296952154,
+          "talla_clean_std": 3.636570771032576,
+          "bmi_mean": 14.199222811273817,
+          "bmi_std": 2.8727241842337223
+        },
+        "20_Costa": {
+          "peso_clean_mean": 9.171342325814397,
+          "peso_clean_std": 1.6208734187776799,
+          "talla_clean_mean": 79.91194775080116,
+          "talla_clean_std": 3.595225382824376,
+          "bmi_mean": 14.4545154960488,
+          "bmi_std": 2.8665948541791475
+        },
+        "20_Insular": {
+          "peso_clean_mean": 9.374752756108688,
+          "peso_clean_std": 2.153756617375534,
+          "talla_clean_mean": 79.98757472762057,
+          "talla_clean_std": 3.4941151040692158,
+          "bmi_mean": 14.765937082267481,
+          "bmi_std": 3.9247014607662685
+        },
+        "20_Sierra": {
+          "peso_clean_mean": 9.174931082209888,
+          "peso_clean_std": 1.9725176137362659,
+          "talla_clean_mean": 79.8162106126884,
+          "talla_clean_std": 3.686336204665384,
+          "bmi_mean": 14.556287426151043,
+          "bmi_std": 3.7492988444995654
+        },
+        "21_Amazonia": {
+          "peso_clean_mean": 9.490868750928293,
+          "peso_clean_std": 1.9027533047962404,
+          "talla_clean_mean": 81.51640298817132,
+          "talla_clean_std": 3.325918216527166,
+          "bmi_mean": 14.399677900899743,
+          "bmi_std": 3.3120314459669817
+        },
+        "21_Costa": {
+          "peso_clean_mean": 9.489735207076512,
+          "peso_clean_std": 2.158163745840947,
+          "talla_clean_mean": 81.25950717382925,
+          "talla_clean_std": 3.7615508271958706,
+          "bmi_mean": 14.442331198753005,
+          "bmi_std": 3.4525541408124605
+        },
+        "21_Insular": {
+          "peso_clean_mean": 9.378744508599029,
+          "peso_clean_std": 1.634967728721497,
+          "talla_clean_mean": 81.39644692071805,
+          "talla_clean_std": 3.520178240987964,
+          "bmi_mean": 14.24276662336793,
+          "bmi_std": 2.683137604277032
+        },
+        "21_Sierra": {
+          "peso_clean_mean": 9.449507423359284,
+          "peso_clean_std": 1.7357312796285314,
+          "talla_clean_mean": 81.44635581990815,
+          "talla_clean_std": 3.517982311257673,
+          "bmi_mean": 14.352710970531996,
+          "bmi_std": 3.057577770537511
+        },
+        "22_Amazonia": {
+          "peso_clean_mean": 9.909623036510855,
+          "peso_clean_std": 2.2071369617402175,
+          "talla_clean_mean": 83.10719860402872,
+          "talla_clean_std": 3.460552906776834,
+          "bmi_mean": 14.415481266581248,
+          "bmi_std": 3.3180962231110276
+        },
+        "22_Costa": {
+          "peso_clean_mean": 9.777317364098318,
+          "peso_clean_std": 1.8134000240668213,
+          "talla_clean_mean": 82.96861778340526,
+          "talla_clean_std": 3.561676616497224,
+          "bmi_mean": 14.33391113623719,
+          "bmi_std": 3.043188138654218
+        },
+        "22_Insular": {
+          "peso_clean_mean": 9.752137641193116,
+          "peso_clean_std": 1.9635975842339175,
+          "talla_clean_mean": 83.08916908202804,
+          "talla_clean_std": 3.6756443485531998,
+          "bmi_mean": 14.226959169632753,
+          "bmi_std": 3.213465506726298
+        },
+        "22_Sierra": {
+          "peso_clean_mean": 9.809544556098794,
+          "peso_clean_std": 1.8955946215056492,
+          "talla_clean_mean": 83.28062492358119,
+          "talla_clean_std": 3.513460067699268,
+          "bmi_mean": 14.179013563252402,
+          "bmi_std": 2.8482814416666793
+        },
+        "23_Amazonia": {
+          "peso_clean_mean": 9.936767636773412,
+          "peso_clean_std": 1.5988415579434738,
+          "talla_clean_mean": 84.67344464549572,
+          "talla_clean_std": 3.466230107589078,
+          "bmi_mean": 13.889480443308315,
+          "bmi_std": 2.5438975160489674
+        },
+        "23_Costa": {
+          "peso_clean_mean": 9.986822280026376,
+          "peso_clean_std": 1.4323035296955,
+          "talla_clean_mean": 84.69674120990447,
+          "talla_clean_std": 3.5205650090152045,
+          "bmi_mean": 13.982970875161788,
+          "bmi_std": 2.2600704231516717
+        },
+        "23_Insular": {
+          "peso_clean_mean": 10.013642942193883,
+          "peso_clean_std": 1.4657932672494105,
+          "talla_clean_mean": 84.54456396370628,
+          "talla_clean_std": 3.4398981918869778,
+          "bmi_mean": 14.11569302958388,
+          "bmi_std": 2.302020406172055
+        },
+        "23_Sierra": {
+          "peso_clean_mean": 10.038494871209474,
+          "peso_clean_std": 1.8150669056952815,
+          "talla_clean_mean": 84.60469759331988,
+          "talla_clean_std": 3.4271634347096716,
+          "bmi_mean": 14.124798839328157,
+          "bmi_std": 2.7978376111911154
+        },
+        "24_Amazonia": {
+          "peso_clean_mean": 10.27217805115647,
+          "peso_clean_std": 1.0677814486982224,
+          "talla_clean_mean": 86.51928757257508,
+          "talla_clean_std": 3.9069234726038,
+          "bmi_mean": 13.91412479102034,
+          "bmi_std": 1.9527802974927033
+        },
+        "24_Costa": {
+          "peso_clean_mean": 10.599463814470324,
+          "peso_clean_std": 2.3527579522516255,
+          "talla_clean_mean": 86.12778434238547,
+          "talla_clean_std": 3.3184424542814703,
+          "bmi_mean": 14.412813247805415,
+          "bmi_std": 3.81438152615263
+        },
+        "24_Insular": {
+          "peso_clean_mean": 10.444507971588465,
+          "peso_clean_std": 1.9578771454956638,
+          "talla_clean_mean": 85.97993966540997,
+          "talla_clean_std": 3.7157105919798603,
+          "bmi_mean": 14.216701851431377,
+          "bmi_std": 2.8889288042066292
+        },
+        "24_Sierra": {
+          "peso_clean_mean": 10.232318046026387,
+          "peso_clean_std": 1.5155388075867486,
+          "talla_clean_mean": 86.22809774666355,
+          "talla_clean_std": 3.453969362442586,
+          "bmi_mean": 13.798998063604161,
+          "bmi_std": 2.394329268478113
+        },
+        "25_Amazonia": {
+          "peso_clean_mean": 10.195024651962507,
+          "peso_clean_std": 1.0434462308218333,
+          "talla_clean_mean": 86.30555073050661,
+          "talla_clean_std": 3.626702923654551,
+          "bmi_mean": 13.772058954114172,
+          "bmi_std": 1.7558456860651979
+        },
+        "25_Costa": {
+          "peso_clean_mean": 10.246610961061362,
+          "peso_clean_std": 2.095383447519001,
+          "talla_clean_mean": 86.28104580137288,
+          "talla_clean_std": 3.2879414387355315,
+          "bmi_mean": 13.794918873493515,
+          "bmi_std": 3.044406910586888
+        },
+        "25_Insular": {
+          "peso_clean_mean": 10.570514162070731,
+          "peso_clean_std": 2.297662583248808,
+          "talla_clean_mean": 85.82858743709382,
+          "talla_clean_std": 3.506224142647215,
+          "bmi_mean": 14.323443784699599,
+          "bmi_std": 3.3086444477065506
+        },
+        "25_Sierra": {
+          "peso_clean_mean": 10.315571790489741,
+          "peso_clean_std": 1.587755208337944,
+          "talla_clean_mean": 85.95284004617268,
+          "talla_clean_std": 3.4739938100098295,
+          "bmi_mean": 14.01428161900102,
+          "bmi_std": 2.6260955276414024
+        },
+        "26_Amazonia": {
+          "peso_clean_mean": 10.562813635363526,
+          "peso_clean_std": 2.0597207133231166,
+          "talla_clean_mean": 85.89588874871791,
+          "talla_clean_std": 3.445181912999467,
+          "bmi_mean": 14.223970808416126,
+          "bmi_std": 2.4255170612657007
+        },
+        "26_Costa": {
+          "peso_clean_mean": 10.14916813719891,
+          "peso_clean_std": 1.0158621211474792,
+          "talla_clean_mean": 85.7098815240596,
+          "talla_clean_std": 3.5600842850034526,
+          "bmi_mean": 13.933758999541254,
+          "bmi_std": 2.065004841490147
+        },
+        "26_Insular": {
+          "peso_clean_mean": 10.415185044405305,
+          "peso_clean_std": 1.7533682630995822,
+          "talla_clean_mean": 85.93091924096171,
+          "talla_clean_std": 3.3345381609807476,
+          "bmi_mean": 14.145128748156054,
+          "bmi_std": 2.430791652733558
+        },
+        "26_Sierra": {
+          "peso_clean_mean": 10.106527160283033,
+          "peso_clean_std": 0.9670525417487037,
+          "talla_clean_mean": 85.95122813854981,
+          "talla_clean_std": 3.7196302525558727,
+          "bmi_mean": 13.687097337973576,
+          "bmi_std": 1.7480756016031285
+        },
+        "27_Amazonia": {
+          "peso_clean_mean": 10.135637921984712,
+          "peso_clean_std": 1.0707467665721415,
+          "talla_clean_mean": 86.0449228334607,
+          "talla_clean_std": 3.1441525908342594,
+          "bmi_mean": 13.70502493010084,
+          "bmi_std": 1.7344128502797942
+        },
+        "27_Costa": {
+          "peso_clean_mean": 10.195456512740865,
+          "peso_clean_std": 1.5770508574561861,
+          "talla_clean_mean": 85.64431502799275,
+          "talla_clean_std": 3.4214033132741797,
+          "bmi_mean": 14.048438747230744,
+          "bmi_std": 2.471139834277941
+        },
+        "27_Insular": {
+          "peso_clean_mean": 10.230682227071453,
+          "peso_clean_std": 1.0405261641040784,
+          "talla_clean_mean": 86.45737660739458,
+          "talla_clean_std": 3.6814041842726137,
+          "bmi_mean": 13.756620238267873,
+          "bmi_std": 1.9616319378835614
+        },
+        "27_Sierra": {
+          "peso_clean_mean": 10.50126707381565,
+          "peso_clean_std": 1.977006613519348,
+          "talla_clean_mean": 85.38013616232286,
+          "talla_clean_std": 3.866200088370721,
+          "bmi_mean": 14.52383036045317,
+          "bmi_std": 3.046779854570674
+        },
+        "28_Amazonia": {
+          "peso_clean_mean": 10.484499323944402,
+          "peso_clean_std": 2.2237696443366337,
+          "talla_clean_mean": 85.85891955103939,
+          "talla_clean_std": 3.5314842134667614,
+          "bmi_mean": 14.236244856719262,
+          "bmi_std": 2.933187803779676
+        },
+        "28_Costa": {
+          "peso_clean_mean": 10.456850929853584,
+          "peso_clean_std": 1.972955188253671,
+          "talla_clean_mean": 85.71507433750702,
+          "talla_clean_std": 3.50113721549732,
+          "bmi_mean": 14.2503897846081,
+          "bmi_std": 2.5889393857763885
+        },
+        "28_Insular": {
+          "peso_clean_mean": 10.24787867230283,
+          "peso_clean_std": 1.0197763914553628,
+          "talla_clean_mean": 86.21674699738418,
+          "talla_clean_std": 3.401958727834699,
+          "bmi_mean": 13.793011079522676,
+          "bmi_std": 1.7587504874782198
+        },
+        "28_Sierra": {
+          "peso_clean_mean": 10.297916876232629,
+          "peso_clean_std": 1.498240663375297,
+          "talla_clean_mean": 86.19998829248387,
+          "talla_clean_std": 3.8519434651873783,
+          "bmi_mean": 13.979542872439579,
+          "bmi_std": 2.4167950658839965
+        },
+        "29_Amazonia": {
+          "peso_clean_mean": 10.37852549215777,
+          "peso_clean_std": 1.9274704298129164,
+          "talla_clean_mean": 86.19719000196805,
+          "talla_clean_std": 3.2768870370993954,
+          "bmi_mean": 14.021965420838054,
+          "bmi_std": 2.713342458548802
+        },
+        "29_Costa": {
+          "peso_clean_mean": 10.373104140288014,
+          "peso_clean_std": 1.5199902462416364,
+          "talla_clean_mean": 85.88677702696572,
+          "talla_clean_std": 3.3954890235056028,
+          "bmi_mean": 14.120365875341333,
+          "bmi_std": 2.5141230127264995
+        },
+        "29_Insular": {
+          "peso_clean_mean": 10.271397117543026,
+          "peso_clean_std": 2.0551887919548992,
+          "talla_clean_mean": 85.9905174613178,
+          "talla_clean_std": 3.5877145340318877,
+          "bmi_mean": 13.942441402176277,
+          "bmi_std": 3.285333255286464
+        },
+        "29_Sierra": {
+          "peso_clean_mean": 10.319199466587694,
+          "peso_clean_std": 1.6140287907737743,
+          "talla_clean_mean": 85.52637120620358,
+          "talla_clean_std": 3.7166127378739464,
+          "bmi_mean": 14.343257762738922,
+          "bmi_std": 2.8923437462497503
+        }
+      }
+    },
+    "reg_edu": {
+      "cols": [
+        "region",
+        "nivel_educacion_madre"
+      ],
+      "table": {
+        "Amazonia_Primaria": {
+          "peso_clean_mean": 6.753262002753926,
+          "peso_clean_std": 3.1879691322466743,
+          "talla_clean_mean": 67.65969926415578,
+          "talla_clean_std": 12.037661637502186,
+          "bmi_mean": 14.302281571633692,
+          "bmi_std": 6.010812312647782
+        },
+        "Amazonia_Secundaria": {
+          "peso_clean_mean": 6.627763601994938,
+          "peso_clean_std": 3.0500052527929107,
+          "talla_clean_mean": 67.4028717102383,
+          "talla_clean_std": 11.941837903816506,
+          "bmi_mean": 14.174892439821424,
+          "bmi_std": 5.748916454801288
+        },
+        "Amazonia_Sin escolaridad": {
+          "peso_clean_mean": 6.872798600345511,
+          "peso_clean_std": 3.1053113119923146,
+          "talla_clean_mean": 67.53657039584627,
+          "talla_clean_std": 11.920113591241316,
+          "bmi_mean": 14.69036089184388,
+          "bmi_std": 6.920684787880353
+        },
+        "Amazonia_Superior": {
+          "peso_clean_mean": 6.65333194855909,
+          "peso_clean_std": 3.12749616274258,
+          "talla_clean_mean": 67.35812091322451,
+          "talla_clean_std": 11.912577462393036,
+          "bmi_mean": 14.26534743184645,
+          "bmi_std": 5.966648328106433
+        },
+        "Costa_Primaria": {
+          "peso_clean_mean": 6.693133383501502,
+          "peso_clean_std": 3.0808395407558287,
+          "talla_clean_mean": 67.6607989642768,
+          "talla_clean_std": 11.872233497909768,
+          "bmi_mean": 14.331868045489816,
+          "bmi_std": 6.152358893504877
+        },
+        "Costa_Secundaria": {
+          "peso_clean_mean": 6.657533095767747,
+          "peso_clean_std": 3.0526872480630463,
+          "talla_clean_mean": 67.45611662275965,
+          "talla_clean_std": 11.887775873456706,
+          "bmi_mean": 14.273703885770498,
+          "bmi_std": 5.89879038160741
+        },
+        "Costa_Sin escolaridad": {
+          "peso_clean_mean": 6.683711793881756,
+          "peso_clean_std": 3.414997676158894,
+          "talla_clean_mean": 66.71271618341325,
+          "talla_clean_std": 11.718437218130198,
+          "bmi_mean": 14.74024531826099,
+          "bmi_std": 7.191420060701448
+        },
+        "Costa_Superior": {
+          "peso_clean_mean": 6.703792584896422,
+          "peso_clean_std": 3.0537595711818404,
+          "talla_clean_mean": 67.56416645334606,
+          "talla_clean_std": 12.092353096421721,
+          "bmi_mean": 14.361890419170905,
+          "bmi_std": 6.139660394761093
+        },
+        "Insular_Primaria": {
+          "peso_clean_mean": 6.694956317552832,
+          "peso_clean_std": 3.150518396545615,
+          "talla_clean_mean": 67.34629776227048,
+          "talla_clean_std": 11.967300199210534,
+          "bmi_mean": 14.324972541861458,
+          "bmi_std": 5.828338607829848
+        },
+        "Insular_Secundaria": {
+          "peso_clean_mean": 6.737837518849242,
+          "peso_clean_std": 3.1433295931057468,
+          "talla_clean_mean": 67.54142894071052,
+          "talla_clean_std": 11.856493171482347,
+          "bmi_mean": 14.381489197404127,
+          "bmi_std": 6.008259980374184
+        },
+        "Insular_Sin escolaridad": {
+          "peso_clean_mean": 6.515884785623535,
+          "peso_clean_std": 2.794095685418725,
+          "talla_clean_mean": 67.39983977257491,
+          "talla_clean_std": 11.996687343867851,
+          "bmi_mean": 14.068678890971984,
+          "bmi_std": 5.556342229228962
+        },
+        "Insular_Superior": {
+          "peso_clean_mean": 6.686569017023938,
+          "peso_clean_std": 3.2854646297893724,
+          "talla_clean_mean": 67.35860337848882,
+          "talla_clean_std": 12.120407000100435,
+          "bmi_mean": 14.454023192460951,
+          "bmi_std": 6.747337385889826
+        },
+        "Sierra_Primaria": {
+          "peso_clean_mean": 6.709045725465362,
+          "peso_clean_std": 3.0051029686419195,
+          "talla_clean_mean": 67.79335440389374,
+          "talla_clean_std": 11.860885340903247,
+          "bmi_mean": 14.276984516373115,
+          "bmi_std": 6.010005448426783
+        },
+        "Sierra_Secundaria": {
+          "peso_clean_mean": 6.597717249386164,
+          "peso_clean_std": 3.0681445809870267,
+          "talla_clean_mean": 67.30050396771317,
+          "talla_clean_std": 11.986310088488729,
+          "bmi_mean": 14.163496912924048,
+          "bmi_std": 5.623875508959118
+        },
+        "Sierra_Sin escolaridad": {
+          "peso_clean_mean": 6.692435962292216,
+          "peso_clean_std": 3.1042549493799436,
+          "talla_clean_mean": 67.41383018159739,
+          "talla_clean_std": 11.85483608798714,
+          "bmi_mean": 14.263072695698524,
+          "bmi_std": 5.929071445078327
+        },
+        "Sierra_Superior": {
+          "peso_clean_mean": 6.661865977835809,
+          "peso_clean_std": 3.022040626519052,
+          "talla_clean_mean": 67.30558008548783,
+          "talla_clean_std": 11.954102861918528,
+          "bmi_mean": 14.407680992815743,
+          "bmi_std": 6.3318762608574435
+        }
+      }
+    }
+  },
+  "categories": {
+    "sexo": [
+      "F",
+      "M"
+    ],
+    "region": [
+      "Costa",
+      "Sierra",
+      "Amazonia",
+      "Insular"
+    ],
+    "nivel_educacion_madre": [
+      "Sin escolaridad",
+      "Primaria",
+      "Secundaria",
+      "Superior"
+    ]
+  }
+}

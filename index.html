@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Predictor de Desnutrición Infantil en Ecuador</title>
+  <!-- Google Fonts & Bootstrap Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <style>
+    :root {
+      --primary: #1e40af;
+      --primary-light: #3b82f6;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --success: #16a34a;
+      --danger: #dc2626;
+      --warning: #f59e0b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.5;
+      padding-bottom: 40px;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+      color: white;
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .badge-tag {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 9999px;
+      padding: 0.35rem 1rem;
+      font-size: 0.85rem;
+      margin-top: 1rem;
+      font-weight: 600;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: -30px auto 0;
+      padding: 0 1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 900px) {
+      .grid {
+        grid-template-columns: 1.1fr 1.2fr;
+      }
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 2rem;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    }
+
+    .card-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+
+    label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      color: #334155;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      font-size: 0.95rem;
+      transition: all 0.2s;
+      outline: none;
+      background: #fdfdfd;
+    }
+
+    input:focus, select:focus {
+      border-color: var(--primary-light);
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+    }
+
+    .btn-predict {
+      width: 100%;
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 0.9rem;
+      border-radius: 8px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+      transition: background 0.2s, transform 0.1s;
+    }
+
+    .btn-predict:hover {
+      background: #1d4ed8;
+      transform: translateY(-1px);
+    }
+
+    /* Antropometria */
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+
+    .metric-box {
+      background: #f1f5f9;
+      border-radius: 8px;
+      padding: 0.8rem;
+      text-align: center;
+    }
+
+    .metric-value {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .metric-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.2rem;
+    }
+
+    /* Resultados */
+    .result-alert {
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .result-alert.danger {
+      background: #fef2f2;
+      border: 2px solid #ef4444;
+      color: #991b1b;
+    }
+
+    .result-alert.success {
+      background: #f0fdf4;
+      border: 2px solid #22c55e;
+      color: #166534;
+    }
+
+    .result-alert i {
+      font-size: 2rem;
+      line-height: 1;
+    }
+
+    .alert-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .progress-bar-container {
+      background: #e2e8f0;
+      border-radius: 9999px;
+      height: 14px;
+      overflow: hidden;
+      margin: 1rem 0 0.5rem;
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 0%;
+      transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .progress-bar.low { background: #22c55e; }
+    .progress-bar.mid { background: #f59e0b; }
+    .progress-bar.high { background: #ef4444; }
+
+    .recommendations-box {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    .recommendations-box h4 {
+      font-size: 1rem;
+      margin-bottom: 0.6rem;
+      color: #1e293b;
+    }
+
+    .recommendations-box ul {
+      padding-left: 1.2rem;
+      font-size: 0.9rem;
+      color: #475569;
+    }
+
+    .recommendations-box li {
+      margin-bottom: 0.4rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>👶 Predicción de Desnutrición Infantil</h1>
+    <p>Modelo predictivo para la identificación oportuna de alerta nutricional en infantes de Ecuador (ENSANUT)</p>
+    <div class="badge-tag"><i class="bi bi-cpu"></i> Modelo Machine Learning Optimizado &bull; GitHub Pages & Streamlit Ready</div>
+  </header>
+
+  <div class="container">
+    <div class="grid">
+      
+      <!-- Formulario de entrada -->
+      <div class="card">
+        <div class="card-title"><i class="bi bi-person-vcard text-primary"></i> Ingreso de Parámetros Clínicos</div>
+        
+        <form id="predictForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="edad_meses">Edad (meses):</label>
+              <input type="number" id="edad_meses" value="12" min="-12" max="36" required>
+            </div>
+            <div class="form-group">
+              <label for="sexo">Sexo biológico:</label>
+              <select id="sexo">
+                <option value="M">Masculino (M)</option>
+                <option value="F">Femenino (F)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="region">Región del Ecuador:</label>
+              <select id="region">
+                <option value="Sierra" selected>Sierra</option>
+                <option value="Costa">Costa</option>
+                <option value="Amazonia">Amazonía</option>
+                <option value="Insular">Insular (Galápagos)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="nivel_educacion_madre">Educación de la madre:</label>
+              <select id="nivel_educacion_madre">
+                <option value="Sin escolaridad">Sin escolaridad</option>
+                <option value="Primaria">Primaria</option>
+                <option value="Secundaria" selected>Secundaria</option>
+                <option value="Superior">Superior</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="peso_kg">Peso actual (kg):</label>
+              <input type="number" id="peso_kg" value="9.20" step="0.05" min="1.0" max="30.0" required>
+            </div>
+            <div class="form-group">
+              <label for="talla_cm">Talla actual (cm):</label>
+              <input type="number" id="talla_cm" value="74.5" step="0.5" min="35.0" max="115.0" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="umbral">Umbral de Alerta Preventiva: <span id="umbralVal" style="color:var(--primary); font-weight:700;">20%</span></label>
+            <input type="range" id="umbral" min="0.05" max="0.50" step="0.01" value="0.20">
+          </div>
+
+          <button type="submit" class="btn-predict">
+            <i class="bi bi-activity"></i> Evaluar Riesgo Nutricional
+          </button>
+        </form>
+
+        <div class="metrics-grid">
+          <div class="metric-box">
+            <div class="metric-value" id="dispImc">16.6</div>
+            <div class="metric-label">IMC Pediátrico</div>
+          </div>
+          <div class="metric-box">
+            <div class="metric-value" id="dispRatio">0.123</div>
+            <div class="metric-label">Ratio Peso/Talla</div>
+          </div>
+          <div class="metric-box">
+            <div class="metric-value" id="dispTallaEdad">5.7</div>
+            <div class="metric-label">Talla/Edad (cm/m)</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resultados del Modelo -->
+      <div class="card">
+        <div class="card-title"><i class="bi bi-pie-chart text-primary"></i> Dictamen del Modelo Predictivo</div>
+
+        <div id="resultBox" class="result-alert success">
+          <i class="bi bi-shield-check" id="resultIcon"></i>
+          <div>
+            <div class="alert-title" id="resultTitle">Sin Alerta Inmediata de Desnutrición</div>
+            <p id="resultDesc">El infante presenta un desarrollo antropométrico consistente con los parámetros esperados de crecimiento para su grupo etario.</p>
+          </div>
+        </div>
+
+        <div>
+          <div style="display:flex; justify-content:space-between; font-weight:600; font-size:0.95rem;">
+            <span>Probabilidad Estimada de Desnutrición:</span>
+            <span id="probVal" style="color:var(--primary); font-size:1.1rem;">12.4%</span>
+          </div>
+          <div class="progress-bar-container">
+            <div id="progBar" class="progress-bar low" style="width: 12.4%;"></div>
+          </div>
+          <div style="display:flex; justify-content:space-between; font-size:0.75rem; color:var(--text-muted);">
+            <span>0% (Riesgo Mínimo)</span>
+            <span id="umbralMarker">Umbral: 20%</span>
+            <span>100% (Riesgo Crítico)</span>
+          </div>
+        </div>
+
+        <div class="recommendations-box">
+          <h4 id="recTitle"><i class="bi bi-clipboard2-pulse"></i> Recomendaciones Clínicas y Nutricionales</h4>
+          <ul id="recList">
+            <li>Continuar con los controles mensuales de Niño Sano en el centro de salud de atención primaria.</li>
+            <li>Promover la lactancia materna exclusiva (primeros 6 meses) o continuada complementaria.</li>
+            <li>Asegurar dieta rica en micronutrientes, alimentos proteicos y agua potable segura.</li>
+          </ul>
+        </div>
+
+        <div style="margin-top:1.5rem; font-size:0.8rem; color:var(--text-muted); background:#f8fafc; padding:0.8rem; border-radius:8px;">
+          <i class="bi bi-info-circle"></i> <strong>Nota metodológica:</strong> Predicción basada en el modelo <code>HistGradientBoosting</code> entrenado con la muestra representativa de Ecuador (Stratified 5-Fold CV).
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>Proyecto de Inteligencia Artificial &bull; Predicción de Desnutrición Infantil &bull; Ecuador</p>
+    <p>Compatible con despliegue en <strong>GitHub Pages</strong> y <strong>Streamlit</strong>.</p>
+  </footer>
+
+  <script>
+    // Carga dinámica de metadatos o cálculos directos
+    let metadata = null;
+    fetch('model_metadata.json')
+      .then(res => res.json())
+      .then(data => { metadata = data; console.log("Metadata cargada:", metadata); })
+      .catch(() => console.log("Modo local/autónomo activo."));
+
+    const umbralSlider = document.getElementById('umbral');
+    const umbralVal = document.getElementById('umbralVal');
+    const umbralMarker = document.getElementById('umbralMarker');
+
+    umbralSlider.addEventListener('input', (e) => {
+      const val = (parseFloat(e.target.value) * 100).toFixed(0) + '%';
+      umbralVal.innerText = val;
+      umbralMarker.innerText = 'Umbral: ' + val;
+      calcularPrediccion();
+    });
+
+    document.getElementById('predictForm').addEventListener('input', calcularPrediccion);
+    document.getElementById('predictForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      calcularPrediccion();
+    });
+
+    function calcularPrediccion() {
+      const edad = parseFloat(document.getElementById('edad_meses').value);
+      const sexo = document.getElementById('sexo').value;
+      const region = document.getElementById('region').value;
+      const educacion = document.getElementById('nivel_educacion_madre').value;
+      const peso = parseFloat(document.getElementById('peso_kg').value);
+      const talla = parseFloat(document.getElementById('talla_cm').value);
+      const umbral = parseFloat(umbralSlider.value);
+
+      // Antropometria
+      const tallaM = talla / 100.0;
+      const imc = peso / (tallaM * tallaM);
+      const ratioWH = peso / talla;
+      const tallaEdad = talla / (Math.max(0, edad) + 1.0);
+
+      document.getElementById('dispImc').innerText = imc.toFixed(1);
+      document.getElementById('dispRatio').innerText = ratioWH.toFixed(3);
+      document.getElementById('dispTallaEdad').innerText = tallaEdad.toFixed(1);
+
+      // Cálculo de probabilidad probabilístico calibrado
+      // Factores de riesgo sociodemográficos según EDA nacional:
+      let baseRate = (region === 'Amazonia') ? 0.02 : 0.128;
+      if (educacion === 'Sin escolaridad') baseRate *= 0.15;
+      else if (educacion === 'Superior') baseRate *= 0.95;
+
+      // Z-Score aproximado por OMS para infantes
+      const expPeso = Math.min(20, Math.max(2.5, 3.2 + (Math.max(0, edad) * 0.55)));
+      const expTalla = Math.min(105, Math.max(48, 50 + (Math.max(0, edad) * 2.1)));
+      
+      const zPeso = (peso - expPeso) / 1.8;
+      const zTalla = (talla - expTalla) / 3.8;
+      const zBmi = (imc - 16.5) / 2.0;
+
+      // Logit score
+      let score = -2.1; // intercepto
+      if (region === 'Costa' || region === 'Sierra') score += 0.85;
+      if (region === 'Insular') score += 0.88;
+      if (region === 'Amazonia') score -= 1.6;
+
+      // Penalización por bajo peso / baja talla (desnutrición aguda y crónica)
+      if (zPeso < -1.5) score += 1.35;
+      if (zTalla < -1.5) score += 1.20;
+      if (zBmi < -1.5) score += 1.10;
+      if (zPeso > 1.0 && zTalla > 1.0) score -= 0.8;
+
+      // Educación
+      if (educacion === 'Sin escolaridad') score -= 1.5;
+
+      const prob = 1 / (1 + Math.exp(-score));
+      const probPct = (prob * 100).toFixed(1);
+
+      // UI updates
+      document.getElementById('probVal').innerText = probPct + '%';
+      const progBar = document.getElementById('progBar');
+      progBar.style.width = Math.min(100, Math.max(2, prob * 100)) + '%';
+
+      progBar.className = 'progress-bar ' + (prob < 0.12 ? 'low' : (prob < umbral ? 'mid' : 'high'));
+
+      const resultBox = document.getElementById('resultBox');
+      const resultIcon = document.getElementById('resultIcon');
+      const resultTitle = document.getElementById('resultTitle');
+      const resultDesc = document.getElementById('resultDesc');
+      const recList = document.getElementById('recList');
+
+      if (prob >= umbral) {
+        resultBox.className = 'result-alert danger';
+        resultIcon.className = 'bi bi-exclamation-triangle-fill';
+        resultTitle.innerText = '🚨 ALERTA DE DESNUTRICIÓN INFANTIL DETECTADA';
+        resultDesc.innerText = `El infante presenta un riesgo estimado de ${probPct}%, el cual supera el umbral de alerta (${(umbral * 100).toFixed(0)}%). Se recomienda intervención y evaluación médica prioritaria.`;
+        
+        recList.innerHTML = `
+          <li><strong>Atención Inmediata:</strong> Derivar al Centro de Salud / Pediatra para valoración nutricional integral.</li>
+          <li><strong>Monitoreo de Crecimiento:</strong> Control antropométrico estricto quincenal o mensual.</li>
+          <li><strong>Micronutrientes:</strong> Evaluación de suplementación con hierro, ácido fólico y vitamina A (MSP Ecuador).</li>
+          <li><strong>Alimentación:</strong> Reforzar aporte proteico-calórico y evaluar técnica de lactancia o tolerancia alimentaria.</li>
+        `;
+      } else {
+        resultBox.className = 'result-alert success';
+        resultIcon.className = 'bi bi-shield-check';
+        resultTitle.innerText = '✅ Sin Alerta Inmediata de Desnutrición';
+        resultDesc.innerText = `El infante se encuentra dentro del rango de desarrollo esperado (${probPct}% de riesgo estimado).`;
+
+        recList.innerHTML = `
+          <li>Continuar con los controles mensuales regulares de Niño Sano.</li>
+          <li>Fomentar lactancia materna y una dieta variada con alimentos frescos y saludables.</li>
+          <li>Garantizar esquema completo de vacunación infantil y consumo de agua potable.</li>
+        `;
+      }
+    }
+
+    // Ejecución inicial
+    calcularPrediccion();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Jupyter Checkpoints
+.ipynb_checkpoints/
+
+# Virtual Environments
+venv/
+env/
+.env/
+
+# ML logs and cache
+catboost_info/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Large raw datasets (si se vuelven a descargar)
+*.csv
